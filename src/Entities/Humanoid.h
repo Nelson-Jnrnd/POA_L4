@@ -17,8 +17,6 @@ public:
 
    bool isAlive();
 
-   
-
 };
 
 
