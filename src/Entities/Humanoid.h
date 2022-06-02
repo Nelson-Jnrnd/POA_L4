@@ -1,14 +1,24 @@
-//
-// Created by André on 02.06.2022.
-//
-
 #ifndef POA_L4_HUMANOID_H
 #define POA_L4_HUMANOID_H
 
+include "GameEnvironment/Position.h"
 
 class Humanoid {
    Position pos;
+   bool alive;
+   Action action;
+
+public:
+   Humanoid();
+   Humanoid(Position position);
+
+   Position getPos();
+   void setPos(Position position);
+
+   bool isAlive();
+
    
+
 };
 
 
