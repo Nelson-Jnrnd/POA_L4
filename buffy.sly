@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="iso-8859-15" standalone="no"?>
+<classDiagram>
+  <diagramElements defaultViewEntities="ALL" defaultViewEnum="true" defaultViewMethods="TYPE_AND_NAME" defaultVisibleTypes="true" informations="" name="Buffy">
+    <entity entityType="CLASS" id="92483" isAbstract="false" name="Poistion" visibility="PUBLIC"/>
+    <inheritance id="92472">
+      <child>92469</child>
+      <parent>92463</parent>
+    </inheritance>
+    <inheritance id="92471">
+      <child>92468</child>
+      <parent>92463</parent>
+    </inheritance>
+    <inheritance id="92470">
+      <child>92467</child>
+      <parent>92463</parent>
+    </inheritance>
+    <entity entityType="CLASS" id="92469" isAbstract="false" name="Human" visibility="PUBLIC"/>
+    <entity entityType="CLASS" id="92468" isAbstract="false" name="Vampire" visibility="PUBLIC">
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Vampire" returnType="" view="DEFAULT" visibility="PUBLIC"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Vampire" returnType="" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="newVampire" type="Human"/>
+      </method>
+    </entity>
+    <entity entityType="CLASS" id="92467" isAbstract="false" name="Buffy" visibility="PUBLIC">
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Buffy" returnType="" view="DEFAULT" visibility="PUBLIC"/>
+    </entity>
+    <entity entityType="CLASS" id="92466" isAbstract="false" name="Interface" visibility="PUBLIC"/>
+    <entity entityType="CLASS" id="92465" isAbstract="false" name="Action" visibility="PUBLIC"/>
+    <entity entityType="CLASS" id="92464" isAbstract="false" name="Field" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="false" name="nextTurn" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
+    </entity>
+    <entity entityType="CLASS" id="92463" isAbstract="false" name="Humanoid" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="false" name="action" type="Action" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="false" name="position" type="Position" visibility="PRIVATE"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Humanoid" returnType="" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="action" type="Action"/>
+      </method>
+    </entity>
+  </diagramElements>
+  <umlView grid="10" name="Main view" open="true">
+    <relationView color="-12566464" relationId="92470">
+      <line>
+        <point>
+          <x>91</x>
+          <y>251</y>
+        </point>
+        <point>
+          <x>91</x>
+          <y>201</y>
+        </point>
+        <point>
+          <x>281</x>
+          <y>201</y>
+        </point>
+        <point>
+          <x>281</x>
+          <y>121</y>
+        </point>
+      </line>
+    </relationView>
+    <relationView color="-12566464" relationId="92471">
+      <line>
+        <point>
+          <x>281</x>
+          <y>251</y>
+        </point>
+        <point>
+          <x>281</x>
+          <y>121</y>
+        </point>
+      </line>
+    </relationView>
+    <relationView color="-12566464" relationId="92472">
+      <line>
+        <point>
+          <x>511</x>
+          <y>251</y>
+        </point>
+        <point>
+          <x>511</x>
+          <y>201</y>
+        </point>
+        <point>
+          <x>281</x>
+          <y>201</y>
+        </point>
+        <point>
+          <x>281</x>
+          <y>121</y>
+        </point>
+      </line>
+    </relationView>
+    <componentView color="-2079" componentID="92463" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>200</x>
+        <y>20</y>
+        <w>170</w>
+        <h>100</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92464" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>920</x>
+        <y>210</y>
+        <w>150</w>
+        <h>70</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92465" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>920</x>
+        <y>50</y>
+        <w>150</w>
+        <h>55</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92466" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>920</x>
+        <y>130</y>
+        <w>150</w>
+        <h>55</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92467" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>10</x>
+        <y>250</y>
+        <w>150</w>
+        <h>70</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92468" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>200</x>
+        <y>250</y>
+        <w>200</w>
+        <h>85</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92469" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>440</x>
+        <y>250</y>
+        <w>150</w>
+        <h>55</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92483" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>550</x>
+        <y>30</y>
+        <w>150</w>
+        <h>55</h>
+      </geometry>
+    </componentView>
+  </umlView>
+</classDiagram>
