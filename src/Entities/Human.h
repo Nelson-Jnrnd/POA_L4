@@ -2,8 +2,12 @@
 #define POA_L4_HUMAN_H
 
 
-class Human {
+#include "Humanoid.h"
 
+class Human : public Humanoid {
+public:
+    Human();
+    void accept(HumanoidVisitor &visitor) override;
 };
 
 

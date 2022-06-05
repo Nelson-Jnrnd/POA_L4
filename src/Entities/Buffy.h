@@ -6,8 +6,12 @@
 #define POA_L4_BUFFY_H
 
 
-class Buffy {
+#include "Humanoid.h"
 
+class Buffy : public Humanoid {
+public:
+    Buffy();
+    void accept(HumanoidVisitor &visitor) override;
 };
 
 

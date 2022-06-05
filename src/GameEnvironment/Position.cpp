@@ -1,20 +1,25 @@
 #include "Position.h"
 
-Position::Position(std::size_t x, std::size_t y): x(x), y(y) {}
+using std::size_t;
 
-size_t getX() const{
-   return x;
+Position::Position(size_t x, size_t y): _x(x), _y(y) {}
+
+Position::Position(Position const &other): Position(other.getX(), other.getY()) {}
+
+size_t Position::getX() const{
+   return _x;
 }
 
-size_t getY() const{
-   return y;
+size_t Position::getY() const{
+   return _y;
 }
 
-void setX(size_t x){
-   Position::x = x;
+void Position::setX(size_t newX){
+    _x = newX;
 }
 
-void setY(size_t y){
-   Position::y = y;
+void Position::setY(size_t newY){
+    _y = newY;
 }
+
 

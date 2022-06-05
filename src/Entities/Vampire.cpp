@@ -3,3 +3,9 @@
 //
 
 #include "Vampire.h"
+
+void Vampire::accept(HumanoidVisitor &visitor) {
+    visitor.visit(*this);
+}
+
+Vampire::Vampire() : Humanoid(Position(0,0)) {}

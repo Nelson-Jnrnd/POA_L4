@@ -1,24 +1,25 @@
 #ifndef POA_L4_HUMANOID_H
 #define POA_L4_HUMANOID_H
 
-include "GameEnvironment/Position.h"
+
+#include <cstdio>
+#include "../GameEnvironment/Position.h"
+#include "../Visitor/HumanoidVisitor.hpp"
 
 class Humanoid {
-   Position pos;
-   bool alive;
-   Action action;
+   Position _position;
+   bool _isAlive;
+
+protected:
+    Humanoid(const Position &position);
 
 public:
-   Humanoid();
-   Humanoid(Position position);
+   const Position& getPosition() const;
+   bool isAlive() const;
 
-   Position getPos();
-   void setPos(Position position);
+   void setPosition(const Position& newPosition);
 
-   bool isAlive();
-
-   
-
+    virtual void accept(HumanoidVisitor &visitor) = 0;
 };
 
 

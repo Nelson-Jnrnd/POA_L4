@@ -6,8 +6,12 @@
 #define POA_L4_VAMPIRE_H
 
 
-class Vampire {
+#include "Humanoid.h"
 
+class Vampire : public Humanoid {
+public:
+    Vampire();
+    void accept(HumanoidVisitor &visitor) override;
 };
 
 

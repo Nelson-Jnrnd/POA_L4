@@ -3,3 +3,9 @@
 //
 
 #include "Human.h"
+
+void Human::accept(HumanoidVisitor &visitor) {
+    visitor.visit(*this);
+}
+
+Human::Human() : Humanoid(Position(0,0)) {}
