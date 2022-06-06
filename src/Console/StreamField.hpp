@@ -2,8 +2,8 @@
 // Created by NelsonWork on 06.06.2022.
 //
 
-#ifndef POA_L4_CONSOLEFIELD_HPP
-#define POA_L4_CONSOLEFIELD_HPP
+#ifndef POA_L4_STREAMFIELD_HPP
+#define POA_L4_STREAMFIELD_HPP
 
 
 #include <vector>
@@ -17,11 +17,11 @@
  * @author Nelson Jeanrenaud
  * @author André Marques Nora
  */
-class ConsoleField : public Field {
-    const char EMPTY_CELL = ' ';
-    const char HORIZONTAL_BORDER = '-';
-    const char VERTICAL_BORDER = '|';
-    const char EDGE_BORDER = '+';
+class StreamField : public Field {
+    static const char EMPTY_CELL;
+    static const char HORIZONTAL_BORDER;
+    static const char VERTICAL_BORDER;
+    static const char EDGE_BORDER;
 
     /**
      * Displayer used to display Humanoids.
@@ -44,12 +44,12 @@ class ConsoleField : public Field {
     void printHorizontalBorder();
 public:
     /**
-     * Constructs a FieldDisplayer
+     * Constructs a StreamField with the given width and height.
      * @param stream The output stream used to display the Field.
      * @param width The width of the Field.
      * @param height The height of the Field.
      */
-    ConsoleField(std::ostream &stream, std::size_t width, std::size_t height);
+    StreamField(std::ostream &stream, std::size_t width, std::size_t height);
 
     /**
      * Prints the field on the output stream.
@@ -63,4 +63,4 @@ public:
 };
 
 
-#endif //POA_L4_CONSOLEFIELD_HPP
+#endif //POA_L4_STREAMFIELD_HPP

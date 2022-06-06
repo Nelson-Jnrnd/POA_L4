@@ -18,11 +18,11 @@ class Field {
     /**
      * The width of the field.
      */
-    const std::size_t _WIDTH;
+    const std::size_t _width;
     /**
      * The height of the field.
      */
-    const std::size_t _HEIGHT;
+    const std::size_t _height;
 
     /**
      * The list of humanoids in the game. Can contain dead humanoids.

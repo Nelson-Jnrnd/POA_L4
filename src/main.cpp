@@ -2,13 +2,13 @@
 #include "Entities/Human.h"
 #include "Entities/Vampire.h"
 #include "Entities/Buffy.h"
-#include "Console/ConsoleField.hpp"
+#include "Console/StreamField.hpp"
 
 int main() {
 
     std::cout << "- Test Labo 4 - " << std::endl;
 
-    ConsoleField field(std::cout, 10, 10);
+    StreamField field(std::cout, 10, 10);
 
     std::cout << "Empty Field" << std::endl;
     field.print();

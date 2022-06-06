@@ -8,8 +8,8 @@ add_executable(POA_L4 src/main.cpp
 
         src/Console/HumanoidDisplayer.cpp
         src/Console/HumanoidDisplayer.hpp
-        src/Console/ConsoleField.cpp
-        src/Console/ConsoleField.hpp
+        src/Console/StreamField.cpp
+        src/Console/StreamField.hpp
 
         src/GameEnvironment/Position.cpp
         src/GameEnvironment/Position.h
