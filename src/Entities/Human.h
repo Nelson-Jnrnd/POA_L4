@@ -4,9 +4,21 @@
 
 #include "Humanoid.h"
 
+/**
+ * Represent a Human in the Buffy vampire hunter game.
+ * @version 1.0
+ * @date 06.06.2022
+ * @author Nelson Jeanrenaud
+ * @author André Marques Nora
+ */
 class Human : public Humanoid {
 public:
+    /**
+     * Constructs a Human at the given position.
+     * @param position  The position of the human.
+     */
     Human(const Position &position);
+
     void accept(HumanoidVisitor &visitor) override;
 };
 

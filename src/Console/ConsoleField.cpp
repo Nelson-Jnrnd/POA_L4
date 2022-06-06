@@ -6,10 +6,12 @@
 
 ConsoleField::ConsoleField(std::ostream &stream, std::size_t width, std::size_t height)
 : Field(width, height), _output(stream), _displayer() {
+    // Initialize the field with empty cells.
     _field = std::vector<std::vector<char>>(Field::getHeight(), std::vector<char>(Field::getWidth(), EMPTY_CELL));
 }
 
 void ConsoleField::update() {
+    // TODO watch out, the humanoids are not removed if they were to move.
     for (auto &humanoid : Field::getHumanoids()) {
         humanoid->accept(_displayer);
         _field[humanoid->getPosition().getY()][humanoid->getPosition().getX()] = _displayer.getOutputChar();
@@ -29,6 +31,5 @@ void ConsoleField::print() {
 }
 
 void ConsoleField::printHorizontalBorder() {
-    _output << EDGE_BORDER << std::string(getWidth(), HORIZONTAL_BORDER) << EDGE_BORDER
-                                                     << std::endl;
+    _output << EDGE_BORDER << std::string(getWidth(), HORIZONTAL_BORDER) << EDGE_BORDER << std::endl;
 }

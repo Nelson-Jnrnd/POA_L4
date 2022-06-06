@@ -4,8 +4,8 @@
 
 #include "Human.h"
 
+Human::Human(const Position &position) : Humanoid(position){}
+
 void Human::accept(HumanoidVisitor &visitor) {
     visitor.visit(*this);
 }
-
-Human::Human(const Position &position) : Humanoid(position){}

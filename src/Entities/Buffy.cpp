@@ -4,8 +4,9 @@
 
 #include "Buffy.h"
 
+Buffy::Buffy(const Position &position) : Humanoid(position) {}
+
 void Buffy::accept(HumanoidVisitor &visitor) {
     visitor.visit(*this);
 }
 
-Buffy::Buffy(const Position &position) : Humanoid(position) {}
