@@ -60,6 +60,8 @@ public:
      * Updates the position of the Humanoids in the field.
      */
     void update();
+
+    unsigned int nextTurn() override;
 };
 
 

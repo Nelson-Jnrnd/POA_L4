@@ -82,7 +82,7 @@ public:
 
     std::vector<Position> getAdjacentPositions(const Position& position) const;
 
-    unsigned nextTurn();
+    virtual unsigned nextTurn();
 protected:
     /**
      * Gets the list of humanoids in the field.

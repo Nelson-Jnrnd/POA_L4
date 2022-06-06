@@ -17,7 +17,6 @@ int main() {
     field.addHuman(1, 1);
     field.update();
     field.print();
-    field.nextTurn();
 
     std::cout << "Adding another Human" << std::endl;
     field.addHuman(5, 3);
@@ -32,6 +31,15 @@ int main() {
     std::cout << "Adding Buffy" << std::endl;
     field.addBuffy(2, 9);
     field.update();
+
+    std::cout << "turn " << field.nextTurn() << std::endl;
     field.print();
-    return 0;
+    std::cout << "turn " << field.nextTurn() << std::endl;
+    field.print();
+    std::cout << "turn " << field.nextTurn() << std::endl;
+    field.print();
+    std::cout << "turn " << field.nextTurn() << std::endl;
+    field.print();
+
+    return EXIT_SUCCESS;
 }

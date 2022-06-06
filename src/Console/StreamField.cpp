@@ -13,7 +13,13 @@ StreamField::StreamField(std::ostream &stream, std::size_t width, std::size_t he
 }
 
 void StreamField::update() {
-    // TODO watch out, the humanoids are not removed if they were to move.
+    // Clear the field.
+    for (std::size_t y = 0; y < Field::getHeight(); y++) {
+        for (std::size_t x = 0; x < Field::getWidth(); x++) {
+            _field[y][x] = EMPTY_CELL;
+        }
+    }
+
     for (auto &humanoid : Field::getHumanoids()) {
         humanoid->accept(_displayer);
         _field[humanoid->getPosition().getY()][humanoid->getPosition().getX()] = _displayer.getOutputChar();
@@ -34,4 +40,10 @@ void StreamField::print() const{
 
 void StreamField::printHorizontalBorder() const{
     _output << EDGE_BORDER << std::string(getWidth(), HORIZONTAL_BORDER) << EDGE_BORDER << std::endl;
+}
+
+unsigned int StreamField::nextTurn() {
+    unsigned turn = Field::nextTurn();
+    update();
+    return turn;
 }
