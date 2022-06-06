@@ -4,17 +4,22 @@
 
 #include "HumanoidDisplayer.hpp"
 
-HumanoidDisplayer::HumanoidDisplayer() {
-}
+HumanoidDisplayer::HumanoidDisplayer() :  _outputChar(){}
 
 void HumanoidDisplayer::visit(Human &human) {
-    std::cout << "H" << std::endl;
+    _outputChar = 'H';
 }
 
 void HumanoidDisplayer::visit(Vampire &vampire) {
-    std::cout << "V" << std::endl;
+    _outputChar = 'V';
 }
 
 void HumanoidDisplayer::visit(Buffy &buffy) {
-    std::cout << "B" << std::endl;
+    _outputChar = 'B';
 }
+
+char HumanoidDisplayer::getOutputChar() const {
+    return _outputChar;
+}
+
+

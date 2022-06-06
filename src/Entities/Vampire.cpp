@@ -4,8 +4,8 @@
 
 #include "Vampire.h"
 
+Vampire::Vampire(const Position &position) : Humanoid(position) {}
+
 void Vampire::accept(HumanoidVisitor &visitor) {
     visitor.visit(*this);
 }
-
-Vampire::Vampire() : Humanoid(Position(0,0)) {}

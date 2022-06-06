@@ -1,8 +1,5 @@
 #include "Humanoid.h"
 
-
-#include "../Visitor/HumanoidVisitor.hpp"
-
 Humanoid::Humanoid(const Position &position) : _position(position), _isAlive(true) {}
 
 const Position &Humanoid::getPosition() const {
