@@ -2,9 +2,12 @@
 #define POA_L4_HUMANOID_H
 
 
+class Action;
+
 #include <cstdio>
 #include "../GameEnvironment/Position.h"
 #include "../Visitor/HumanoidVisitor.hpp"
+#include "../Actions/Action.h"
 
 /**
  * Represent a Humanoid in the Buffy vampire hunter game.
@@ -24,6 +27,7 @@ class Humanoid {
      */
     bool _isAlive;
 
+    std::unique_ptr<Action> _actionStrategy;
 protected:
     /**
      * Constructs a humanoid at the given position.
@@ -32,6 +36,10 @@ protected:
     Humanoid(const Position &position);
 
 public:
+    /**
+     * Destructs the humanoid.
+     */
+    virtual ~Humanoid() = default;
     /**
      * Gets the position of the humanoid.
      * @return  The position of the humanoid.
@@ -49,6 +57,10 @@ public:
      * @param newPosition  The new position of the humanoid.
      */
     void setPosition(const Position &newPosition);
+
+    void setAction(const Field& field);
+
+    void executeAction(Field& field);
 
     virtual void accept(HumanoidVisitor &visitor) = 0;
 };

@@ -17,6 +17,7 @@ int main() {
     field.addHuman(1, 1);
     field.update();
     field.print();
+    field.nextTurn();
 
     std::cout << "Adding another Human" << std::endl;
     field.addHuman(5, 3);
