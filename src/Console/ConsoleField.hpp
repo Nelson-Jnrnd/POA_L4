@@ -18,10 +18,16 @@
  * @author 
  */
 class ConsoleField : public Field {
-    const char _emptyCell = ' ';
+    const char EMPTY_CELL = ' ';
+    const char HORIZONTAL_BORDER = '-';
+    const char VERTICAL_BORDER = '|';
+    const char EDGE_BORDER = '+';
+
     HumanoidDisplayer _displayer;
     std::vector<std::vector<char>> _field;
     std::ostream &_output;
+
+    void printHorizontalBorder();
 public:
     ConsoleField(std::ostream &stream, std::size_t width, std::size_t height);
     void print();

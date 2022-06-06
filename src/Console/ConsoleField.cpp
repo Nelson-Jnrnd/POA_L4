@@ -6,7 +6,7 @@
 
 ConsoleField::ConsoleField(std::ostream &stream, std::size_t width, std::size_t height)
 : Field(width, height), _output(stream), _displayer() {
-    _field = std::vector<std::vector<char>>(Field::getHeight(), std::vector<char>(Field::getWidth(), _emptyCell));
+    _field = std::vector<std::vector<char>>(Field::getHeight(), std::vector<char>(Field::getWidth(), EMPTY_CELL));
 }
 
 void ConsoleField::update() {
@@ -17,10 +17,18 @@ void ConsoleField::update() {
 }
 
 void ConsoleField::print() {
+    printHorizontalBorder();
     for (auto &row : _field) {
+        _output << VERTICAL_BORDER;
         for (auto &cell : row) {
             _output << cell;
         }
-        _output << std::endl;
+        _output << VERTICAL_BORDER << std::endl;
     }
+    printHorizontalBorder();
+}
+
+void ConsoleField::printHorizontalBorder() {
+    _output << EDGE_BORDER << std::string(getWidth(), HORIZONTAL_BORDER) << EDGE_BORDER
+                                                     << std::endl;
 }
