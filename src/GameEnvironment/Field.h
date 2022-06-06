@@ -19,6 +19,8 @@ public:
     std::size_t getHeight() const;
 
     void addHuman(std::size_t x, std::size_t y);
+    void addVampire(std::size_t x, std::size_t y);
+    void addBuffy(std::size_t x, std::size_t y);
     void accept(HumanoidVisitor &visitor);
 
 protected:

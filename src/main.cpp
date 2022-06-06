@@ -2,9 +2,7 @@
 #include "Entities/Human.h"
 #include "Entities/Vampire.h"
 #include "Entities/Buffy.h"
-#include "Console/HumanoidDisplayer.hpp"
 #include "Console/ConsoleField.hpp"
-
 
 int main() {
 
@@ -22,6 +20,16 @@ int main() {
 
     std::cout << "Adding another Human" << std::endl;
     field.addHuman(5, 3);
+    field.update();
+    field.print();
+
+    std::cout << "Adding Vampire" << std::endl;
+    field.addVampire(7, 7);
+    field.update();
+    field.print();
+
+    std::cout << "Adding Buffy" << std::endl;
+    field.addBuffy(2, 9);
     field.update();
     field.print();
     return 0;
