@@ -1,5 +1,7 @@
-//
-// Created by André on 02.06.2022.
-//
-
 #include "Move.h"
+
+Move::Move(Humanoid* humanoid, Position destPos) : Action(humanoid), destPos(destPos){}
+
+void Move::execute(Field &field) {
+   humanoid->setPosition(destPos);
+}

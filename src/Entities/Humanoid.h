@@ -51,6 +51,8 @@ public:
     void setPosition(const Position &newPosition);
 
     virtual void accept(HumanoidVisitor &visitor) = 0;
+
+    void kill();
 };
 
 

@@ -1,5 +1,7 @@
-//
-// Created by André on 02.06.2022.
-//
-
 #include "Eliminate.h"
+
+Eliminate::Eliminate(Humanoid *humanoid) : Action(humanoid){}
+
+void Eliminate::execute(Field &field) {
+   humanoid->kill();
+}

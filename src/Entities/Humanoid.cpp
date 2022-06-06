@@ -13,3 +13,7 @@ void Humanoid::setPosition(const Position& newPosition) {
 bool Humanoid::isAlive() const {
     return _isAlive;
 }
+
+void Humanoid::kill() {
+   _isAlive = false;
+}
