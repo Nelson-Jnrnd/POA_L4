@@ -19,6 +19,7 @@
  * @author 
  */
 class HumanoidDisplayer : public HumanoidVisitor {
+    char _outputChar;
 public:
     /**
      * Constructor
@@ -29,6 +30,8 @@ public:
      * Destructor
      */
     ~HumanoidDisplayer() override = default;
+
+    char getOutputChar() const;
 
     void visit(Human &human) override;
 

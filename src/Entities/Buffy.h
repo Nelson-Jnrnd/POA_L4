@@ -6,7 +6,7 @@
 
 class Buffy : public Humanoid {
 public:
-    Buffy();
+    Buffy(const Position &position);
     void accept(HumanoidVisitor &visitor) override;
 };
 

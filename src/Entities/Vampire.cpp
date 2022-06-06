@@ -8,4 +8,4 @@ void Vampire::accept(HumanoidVisitor &visitor) {
     visitor.visit(*this);
 }
 
-Vampire::Vampire() : Humanoid(Position(0,0)) {}
+Vampire::Vampire(const Position &position) : Humanoid(position) {}

@@ -8,5 +8,4 @@ void Buffy::accept(HumanoidVisitor &visitor) {
     visitor.visit(*this);
 }
 
-Buffy::Buffy() : Humanoid(Position(0,0)) {}
-
+Buffy::Buffy(const Position &position) : Humanoid(position) {}

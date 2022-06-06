@@ -3,27 +3,26 @@
 #include "Entities/Vampire.h"
 #include "Entities/Buffy.h"
 #include "Console/HumanoidDisplayer.hpp"
+#include "Console/ConsoleField.hpp"
 
 
 int main() {
 
     std::cout << "- Test Labo 4 - " << std::endl;
-    // Creates a human
-    Human human;
-    Vampire vampire;
-    Buffy buffy;
 
-    // Creates a HumanoidDisplayer
-    HumanoidDisplayer humanoidDisplayer;
+    ConsoleField field(std::cout, 10, 10);
 
-    // Visits the human
-    humanoidDisplayer.visit(human);
+    std::cout << "Empty Field" << std::endl;
+    field.print();
 
-    // Visits the vampire
-    humanoidDisplayer.visit(vampire);
+    std::cout << "Adding Human" << std::endl;
+    field.addHuman(1, 1);
+    field.update();
+    field.print();
 
-    // Visits the buffy
-    humanoidDisplayer.visit(buffy);
-
+    std::cout << "Adding another Human" << std::endl;
+    field.addHuman(5, 3);
+    field.update();
+    field.print();
     return 0;
 }

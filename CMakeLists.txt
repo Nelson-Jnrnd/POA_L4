@@ -8,9 +8,13 @@ add_executable(POA_L4 src/main.cpp
 
         src/Console/HumanoidDisplayer.cpp
         src/Console/HumanoidDisplayer.hpp
+        src/Console/ConsoleField.cpp
+        src/Console/ConsoleField.hpp
 
         src/GameEnvironment/Position.cpp
         src/GameEnvironment/Position.h
+        src/GameEnvironment/Field.cpp
+        src/GameEnvironment/Field.h
 
         src/Entities/Humanoid.cpp
         src/Entities/Humanoid.h

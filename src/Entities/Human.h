@@ -6,7 +6,7 @@
 
 class Human : public Humanoid {
 public:
-    Human();
+    Human(const Position &position);
     void accept(HumanoidVisitor &visitor) override;
 };
 

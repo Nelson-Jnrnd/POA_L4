@@ -10,7 +10,7 @@
 
 class Vampire : public Humanoid {
 public:
-    Vampire();
+    Vampire(const Position &position);
     void accept(HumanoidVisitor &visitor) override;
 };
 
