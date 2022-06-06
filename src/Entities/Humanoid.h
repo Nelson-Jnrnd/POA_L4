@@ -27,13 +27,14 @@ class Humanoid {
      */
     bool _isAlive;
 
-    std::unique_ptr<Action> _actionStrategy;
+    std::shared_ptr<Action> _actionStrategy;
 protected:
     /**
      * Constructs a humanoid at the given position.
      * @param position  The position of the humanoid.
      */
     Humanoid(const Position &position);
+    void setStrategy(const std::shared_ptr<Action> &actionStrategy);
 
 public:
     /**
@@ -58,9 +59,9 @@ public:
      */
     void setPosition(const Position &newPosition);
 
-    void setAction(const Field& field);
-
     void executeAction(Field& field);
+
+    virtual void setAction(const Field& field) = 0;
 
     virtual void accept(HumanoidVisitor &visitor) = 0;
 };

@@ -29,4 +29,6 @@ add_executable(POA_L4 src/main.cpp
         src/Actions/Action.h
         src/Actions/Flee.cpp
         src/Actions/Flee.h
+        src/Actions/Chase.cpp
+        src/Actions/Chase.hpp
         )

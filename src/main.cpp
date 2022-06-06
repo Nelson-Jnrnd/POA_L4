@@ -10,6 +10,8 @@ int main() {
 
     StreamField field(std::cout, 10, 10);
 
+    field.getAdjacentPositions(Position(0, 1));
+
     std::cout << "Empty Field" << std::endl;
     field.print();
 

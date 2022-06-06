@@ -12,12 +12,15 @@
  * @author André Marques Nora
  */
 class Human : public Humanoid {
+    std::shared_ptr<Action> _flee;
 public:
     /**
      * Constructs a Human at the given position.
      * @param position  The position of the human.
      */
     Human(const Position &position);
+
+    void setAction(const Field &field) override;
 
     void accept(HumanoidVisitor &visitor) override;
 };

@@ -52,6 +52,9 @@ public:
      * @param newY The new y coordinate.
      */
     void setY(size_t newY);
+
+    bool operator==(const Position &other) const;
+    double getEuclideanDistance(const Position &position) const;
 };
 
 

@@ -12,12 +12,15 @@
  * @author André Marques Nora
  */
 class Buffy : public Humanoid {
+    std::shared_ptr<Action> _chaseVampires;
 public:
     /**
      * Constructs a Buffy at the given position.
      * @param position  The position of the Buffy.
      */
     Buffy(const Position &position);
+
+    void setAction(const Field &field) override;
 
     void accept(HumanoidVisitor &visitor) override;
 };

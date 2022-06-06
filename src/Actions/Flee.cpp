@@ -9,11 +9,13 @@ Flee::Flee(Humanoid &subject) : Action(subject) {}
 void Flee::execute(Field &field) {
     std::vector<Position> adjacentPositions (field.getAdjacentPositions(_subject.getPosition()));
 
-    static std::random_device rd;
-    static std::mt19937 mt(rd());
-    std::uniform_int_distribution<size_t> dist(0, adjacentPositions.size() - 1);
+    if(!adjacentPositions.empty()) {
+        static std::random_device rd;
+        static std::mt19937 mt(rd());
+        std::uniform_int_distribution<size_t> dist(0, adjacentPositions.size() - 1);
 
-    Position& randomPosition = adjacentPositions[dist(mt) % adjacentPositions.size()];
+        Position &randomPosition = adjacentPositions.at(dist(mt));
 
-    _subject.setPosition(randomPosition);
+        _subject.setPosition(randomPosition);
+    }
 }

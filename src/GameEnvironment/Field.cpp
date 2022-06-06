@@ -45,10 +45,10 @@ std::vector<Position> Field::getAdjacentPositions(const Position &position) cons
     std::vector<Position> adjacentPositions;
     adjacentPositions.reserve(8);
 
-    size_t minX = position.getX() - 1 > 0 ? position.getX() - 1 : 0;
-    size_t minY = position.getY() - 1 > 0 ? position.getY() - 1 : 0;
-    size_t maxX = position.getX() < getWidth() - 1 ? position.getX() + 1 : getWidth() - 1;
-    size_t maxY = position.getY() < getHeight() - 1 ? position.getY() + 1 : getHeight() - 1;
+    size_t minX = position.getX() > 1 ? position.getX() - 1 : 0;
+    size_t minY = position.getY() > 1 ? position.getY() - 1 : 0;
+    size_t maxX = position.getX() + 1 < getWidth() ? position.getX() + 1 : getWidth() - 1;
+    size_t maxY = position.getY() + 1< getHeight() ? position.getY() + 1 : getHeight() - 1;
 
     for (size_t x = minX; x <= maxX; x++) {
         for (size_t y = minY; y <= maxY; y++) {
@@ -79,3 +79,18 @@ unsigned Field::nextTurn()
             ++it;
     return _turn++;
 }
+
+std::shared_ptr<Humanoid> Field::getClosestHumanoid(const Humanoid &humanoid, const std::type_info &type) const {
+
+    std::shared_ptr<Humanoid> closestHumanoid;
+        for (auto &_humanoid : _humanoids) {
+            if (typeid(_humanoid) == type) {
+                if (!closestHumanoid || _humanoid->getPosition().getEuclideanDistance(humanoid.getPosition()) <
+                        closestHumanoid->getPosition().getEuclideanDistance(humanoid.getPosition())) {
+                    closestHumanoid = std::shared_ptr<Humanoid>(_humanoid);
+                }
+            }
+        }
+    return closestHumanoid;
+}
+

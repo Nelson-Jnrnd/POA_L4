@@ -16,12 +16,15 @@
  * @author André Marques Nora
  */
 class Vampire : public Humanoid {
+    std::shared_ptr<Action> _chaseHumans;
 public:
     /**
      * Constructs a vampire at the given position.
      * @param position  The position of the vampire.
      */
     Vampire(const Position &position);
+
+    void setAction(const Field &field) override;
 
     void accept(HumanoidVisitor &visitor) override;
 };

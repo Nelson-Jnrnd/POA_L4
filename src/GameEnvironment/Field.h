@@ -80,7 +80,11 @@ public:
      */
     void accept(HumanoidVisitor &visitor);
 
+
     std::vector<Position> getAdjacentPositions(const Position& position) const;
+
+    std::shared_ptr<Humanoid> getClosestHumanoid(const Humanoid& humanoid, const std::type_info& type) const;
+
 
     virtual unsigned nextTurn();
 protected:
