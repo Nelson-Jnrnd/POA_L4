@@ -41,7 +41,7 @@ class StreamField : public Field {
     /**
      * Prints the horizontal border of the Field.
      */
-    void printHorizontalBorder();
+    void printHorizontalBorder() const;
 public:
     /**
      * Constructs a StreamField with the given width and height.
@@ -54,7 +54,7 @@ public:
     /**
      * Prints the field on the output stream.
      */
-    void print();
+    void print() const;
 
     /**
      * Updates the position of the Humanoids in the field.

@@ -20,7 +20,7 @@ void StreamField::update() {
     }
 }
 
-void StreamField::print() {
+void StreamField::print() const{
     printHorizontalBorder();
     for (auto &row : _field) {
         _output << VERTICAL_BORDER;
@@ -32,6 +32,6 @@ void StreamField::print() {
     printHorizontalBorder();
 }
 
-void StreamField::printHorizontalBorder() {
+void StreamField::printHorizontalBorder() const{
     _output << EDGE_BORDER << std::string(getWidth(), HORIZONTAL_BORDER) << EDGE_BORDER << std::endl;
 }

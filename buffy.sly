@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="iso-8859-15" standalone="no"?>
 <classDiagram>
   <diagramElements defaultViewEntities="ALL" defaultViewEnum="true" defaultViewMethods="TYPE_AND_NAME" defaultVisibleTypes="true" informations="" name="Buffy">
+    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="95372" name="uses">
+      <role componentId="94199" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+      <role componentId="95089" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+    </association>
     <inheritance id="95090">
       <child>95089</child>
       <parent>94858</parent>
@@ -40,7 +54,6 @@
       <attribute const="false" defaultValue="" isStatic="true" name="HORIZONTAL_BORDER" type="char" visibility="PRIVATE"/>
       <attribute const="false" defaultValue="" isStatic="true" name="VERTICAL_BORDER" type="void" visibility="PRIVATE"/>
       <attribute const="false" defaultValue="" isStatic="true" name="EDGE_BORDER" type="void" visibility="PRIVATE"/>
-      <attribute const="false" defaultValue="" isStatic="false" name="_displayer" type="HumanoidDisplayer" visibility="PRIVATE"/>
       <attribute const="false" defaultValue="" isStatic="false" name="_field" type="vector&lt;vector&lt;char&gt;&gt;" visibility="PRIVATE"/>
       <attribute const="false" defaultValue="" isStatic="false" name="_output" type="ostream&amp;" visibility="PRIVATE"/>
       <method is-constructor="true" isAbstract="false" isStatic="false" name="StreamField" returnType="" view="DEFAULT" visibility="PUBLIC">
@@ -48,9 +61,9 @@
         <variable const="false" name="width" type="size_t"/>
         <variable const="false" name="height" type="size_t"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="print" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="const_print" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="false" isStatic="false" name="update" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="printHorizontalBorder" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="const_printHorizontalBorder" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
     </entity>
     <inheritance id="93008">
       <child>93004</child>
@@ -143,7 +156,6 @@
     <entity entityType="CLASS" id="92464" isAbstract="false" name="Field" visibility="PUBLIC">
       <attribute const="false" defaultValue="" isStatic="false" name="_width" type="size_t" visibility="PRIVATE"/>
       <attribute const="false" defaultValue="" isStatic="false" name="_height" type="size_t" visibility="PRIVATE"/>
-      <attribute const="false" defaultValue="" isStatic="false" name="_humanoids" type="list&lt;unique_ptr&lt;Humanoid&gt;&gt;" visibility="PRIVATE"/>
       <method is-constructor="true" isAbstract="false" isStatic="false" name="Field" returnType="" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="width" type="size_t"/>
         <variable const="false" name="height" type="size_t"/>
@@ -461,21 +473,63 @@
         </point>
         <point>
           <x>1101</x>
-          <y>261</y>
+          <y>246</y>
         </point>
       </line>
     </relationView>
     <relationView color="-12566464" relationId="95090">
       <line>
         <point>
-          <x>1701</x>
-          <y>191</y>
+          <x>1681</x>
+          <y>271</y>
         </point>
         <point>
-          <x>1701</x>
+          <x>1681</x>
           <y>146</y>
         </point>
       </line>
+    </relationView>
+    <relationView color="-12566464" relationId="95372">
+      <line>
+        <point>
+          <x>1301</x>
+          <y>351</y>
+        </point>
+        <point>
+          <x>1541</x>
+          <y>351</y>
+        </point>
+      </line>
+      <labelAssociation>
+        <x>1413</x>
+        <y>360</y>
+        <w>28</w>
+        <h>17</h>
+      </labelAssociation>
+      <roleAssociation>
+        <x>1305</x>
+        <y>355</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <roleAssociation>
+        <x>1535</x>
+        <y>355</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <multipliciteAssociation>
+        <x>1305</x>
+        <y>328</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+      <multipliciteAssociation>
+        <x>1527</x>
+        <y>328</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
     </relationView>
     <componentView color="-2079" componentID="92483" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
@@ -530,7 +584,7 @@
         <x>900</x>
         <y>40</y>
         <w>400</w>
-        <h>220</h>
+        <h>205</h>
       </geometry>
     </componentView>
     <componentView color="-2079" componentID="92463" displayAttributes="true" displayDefault="true" displayMethods="true">
@@ -570,12 +624,12 @@
         <x>900</x>
         <y>310</y>
         <w>400</w>
-        <h>220</h>
+        <h>205</h>
       </geometry>
     </componentView>
     <componentView color="-2079" componentID="94858" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
-        <x>1560</x>
+        <x>1550</x>
         <y>30</y>
         <w>270</w>
         <h>115</h>
@@ -583,8 +637,8 @@
     </componentView>
     <componentView color="-2079" componentID="95089" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
-        <x>1560</x>
-        <y>190</y>
+        <x>1540</x>
+        <y>270</y>
         <w>390</w>
         <h>145</h>
       </geometry>
