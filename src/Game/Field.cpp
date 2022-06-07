@@ -2,10 +2,10 @@
 // Created by André on 02.06.2022.
 //
 
-#include "Field.h"
-#include "../Roles/Human.h"
-#include "../Roles/Vampire.h"
-#include "../Roles/Buffy.h"
+#include "Field.hpp"
+#include "../Roles/Human.hpp"
+#include "../Roles/Vampire.hpp"
+#include "../Roles/Buffy.hpp"
 
 
 using std::list;

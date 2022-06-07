@@ -7,7 +7,7 @@
 
 
 #include "../Roles/RoleVisitor.hpp"
-#include "../Game/Humanoid.h"
+#include "../Game/Humanoid.hpp"
 #include <cstdio>
 #include <iostream>
 

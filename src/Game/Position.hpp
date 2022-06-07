@@ -1,5 +1,5 @@
-#ifndef POA_L4_POSITION_H
-#define POA_L4_POSITION_H
+#ifndef POA_L4_POSITION_HPP
+#define POA_L4_POSITION_HPP
 
 
 
@@ -59,4 +59,4 @@ public:
 };
 
 
-#endif //POA_L4_POSITION_H
+#endif //POA_L4_POSITION_HPP

@@ -2,10 +2,10 @@
 // Created by André on 02.06.2022.
 //
 
-#include "Human.h"
+#include "Human.hpp"
 
 #include <memory>
-#include "../Actions/Flee.h"
+#include "../Actions/Flee.hpp"
 
 
 Human::Human(Humanoid &owner) : _flee(std::make_shared<Flee>(owner)), Role(owner) {

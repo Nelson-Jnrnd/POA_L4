@@ -2,8 +2,8 @@
 // Created by André on 02.06.2022.
 //
 
-#include "Vampire.h"
-#include "Human.h"
+#include "Vampire.hpp"
+#include "Human.hpp"
 #include "../Actions/ChaseAndBite.hpp"
 
 

@@ -1,7 +1,7 @@
-#include "Humanoid.h"
-#include "../Roles/Human.h"
-#include "../Roles/Vampire.h"
-#include "../Roles/Buffy.h"
+#include "Humanoid.hpp"
+#include "../Roles/Human.hpp"
+#include "../Roles/Vampire.hpp"
+#include "../Roles/Buffy.hpp"
 
 Humanoid::Humanoid(const Position &position)
 : _position(position), _isAlive(true) {}

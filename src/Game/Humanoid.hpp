@@ -1,13 +1,13 @@
-#ifndef POA_L4_HUMANOID_H
-#define POA_L4_HUMANOID_H
+#ifndef POA_L4_HUMANOID_HPP
+#define POA_L4_HUMANOID_HPP
 
 
 class Action;
 class Role;
 #include <cstdio>
-#include "Position.h"
+#include "Position.hpp"
 #include "../Roles/RoleVisitor.hpp"
-#include "../Actions/Action.h"
+#include "../Actions/Action.hpp"
 #include "../Roles/Role.hpp"
 
 /**
@@ -80,4 +80,4 @@ public:
 };
 
 
-#endif //POA_L4_HUMANOID_H
+#endif //POA_L4_HUMANOID_HPP

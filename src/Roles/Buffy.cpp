@@ -3,9 +3,9 @@
 //
 
 
-#include "Buffy.h"
+#include "Buffy.hpp"
 #include "../Actions/Chase.hpp"
-#include "Vampire.h"
+#include "Vampire.hpp"
 #include <memory>
 
 

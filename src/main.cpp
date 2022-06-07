@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Roles/Human.h"
-#include "Roles/Vampire.h"
-#include "Roles/Buffy.h"
+#include "Roles/Human.hpp"
+#include "Roles/Vampire.hpp"
+#include "Roles/Buffy.hpp"
 #include "Console/StreamField.hpp"
 
 int main() {

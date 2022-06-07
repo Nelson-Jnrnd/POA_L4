@@ -1,8 +1,8 @@
-#ifndef POA_L4_BUFFY_H
-#define POA_L4_BUFFY_H
+#ifndef POA_L4_BUFFY_HPP
+#define POA_L4_BUFFY_HPP
 
 
-#include "Human.h"
+#include "Human.hpp"
 
 /**
  * Represent a Buffy in the Buffy vampire hunter game.
@@ -22,4 +22,4 @@ public:
 };
 
 
-#endif //POA_L4_BUFFY_H
+#endif //POA_L4_BUFFY_HPP

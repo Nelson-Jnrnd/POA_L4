@@ -1,12 +1,12 @@
-#ifndef POA_L4_FIELD_H
-#define POA_L4_FIELD_H
+#ifndef POA_L4_FIELD_HPP
+#define POA_L4_FIELD_HPP
 
 
 #include <cstdio>
 #include <memory>
 #include <list>
 #include <vector>
-#include "Humanoid.h"
+#include "Humanoid.hpp"
 
 /**
  * Represent the Field of the buffy vampire hunter game.
@@ -96,4 +96,4 @@ protected:
 };
 
 
-#endif //POA_L4_FIELD_H
+#endif //POA_L4_FIELD_HPP

@@ -3,7 +3,7 @@
 //
 
 #include "ChaseAndBite.hpp"
-#include "../Roles/Vampire.h"
+#include "../Roles/Vampire.hpp"
 
 ChaseAndBite::ChaseAndBite(Humanoid &subject, const std::type_info &targetType) : Chase(subject, targetType) {
 

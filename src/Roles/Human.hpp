@@ -1,5 +1,5 @@
-#ifndef POA_L4_HUMAN_H
-#define POA_L4_HUMAN_H
+#ifndef POA_L4_HUMAN_HPP
+#define POA_L4_HUMAN_HPP
 
 
 #include "Role.hpp"
@@ -27,4 +27,4 @@ public:
 };
 
 
-#endif //POA_L4_HUMAN_H
+#endif //POA_L4_HUMAN_HPP

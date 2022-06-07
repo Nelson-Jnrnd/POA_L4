@@ -2,8 +2,8 @@
 // Created by André on 02.06.2022.
 //
 
-#ifndef POA_L4_VAMPIRE_H
-#define POA_L4_VAMPIRE_H
+#ifndef POA_L4_VAMPIRE_HPP
+#define POA_L4_VAMPIRE_HPP
 
 #include "Role.hpp"
 
@@ -26,4 +26,4 @@ public:
 };
 
 
-#endif //POA_L4_VAMPIRE_H
+#endif //POA_L4_VAMPIRE_HPP

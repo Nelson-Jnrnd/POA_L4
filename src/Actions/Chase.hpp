@@ -5,8 +5,8 @@
 #ifndef POA_L4_CHASE_HPP
 #define POA_L4_CHASE_HPP
 
-#include "Action.h"
-#include "../Game/Field.h"
+#include "Action.hpp"
+#include "../Game/Field.hpp"
 
 
 /**

@@ -12,25 +12,25 @@ add_executable(POA_L4 src/main.cpp
         src/Console/StreamField.hpp
 
         src/Game/Position.cpp
-        src/Game/Position.h
+        src/Game/Position.hpp
         src/Game/Field.cpp
-        src/Game/Field.h
+        src/Game/Field.hpp
 
         src/Game/Humanoid.cpp
-        src/Game/Humanoid.h
+        src/Game/Humanoid.hpp
         src/Roles/Human.cpp
-        src/Roles/Human.h
+        src/Roles/Human.hpp
         src/Roles/Vampire.cpp
-        src/Roles/Vampire.h
+        src/Roles/Vampire.hpp
         src/Roles/Buffy.cpp
-        src/Roles/Buffy.h
+        src/Roles/Buffy.hpp
         src/Roles/Role.cpp
         src/Roles/Role.hpp
 
         src/Actions/Action.cpp
-        src/Actions/Action.h
+        src/Actions/Action.hpp
         src/Actions/Flee.cpp
-        src/Actions/Flee.h
+        src/Actions/Flee.hpp
         src/Actions/Chase.cpp
         src/Actions/Chase.hpp
         src/Actions/ChaseAndBite.cpp
