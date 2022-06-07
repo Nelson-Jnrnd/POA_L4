@@ -12,15 +12,15 @@ using std::list;
 Field::Field(std::size_t width, std::size_t height) : _width(width), _height(height), _turn(0), _humanoids(){}
 
 void Field::addHuman(int x, int y) {
-    _humanoids.push_back(new Human(Position(x, y)));
+    _humanoids.push_back(Humanoid::createHuman(Position(x, y)));
 }
 
 void Field::addVampire(int x, int y) {
-    _humanoids.push_back(new Vampire(Position(x, y)));
+    _humanoids.push_back(Humanoid::createVampire(Position(x, y)));
 }
 
 void Field::addBuffy(int x, int y) {
-    _humanoids.push_back(new Buffy(Position(x, y)));
+    _humanoids.push_back(Humanoid::createBuffy(Position(x, y)));
 }
 
 void Field::accept(HumanoidVisitor &visitor) {
@@ -70,8 +70,8 @@ unsigned Field::nextTurn()
     // Enlever les humanoides tués
     for (auto it = _humanoids.begin(); it != _humanoids.end(); )
         if (!(*it)->isAlive()) {
-            it = _humanoids.erase(it); // suppression de l’élément dans la liste
             delete *it;
+            it = _humanoids.erase(it); // suppression de l’élément dans la liste
         }
         else
             ++it;
@@ -82,7 +82,7 @@ Humanoid* Field::getClosestHumanoid(const Humanoid &humanoid, const std::type_in
 
     Humanoid* closestHumanoid = nullptr;
         for (Humanoid* humanoidOnBoard : _humanoids) {
-            if (type == typeid(*humanoidOnBoard)) {
+            if (type == typeid(*humanoidOnBoard->getRole())) {
                 if (closestHumanoid == nullptr || humanoidOnBoard->getPosition().getEuclideanDistance(humanoid.getPosition()) <
                                         closestHumanoid->getPosition().getEuclideanDistance(humanoid.getPosition())) {
                     closestHumanoid = humanoidOnBoard;

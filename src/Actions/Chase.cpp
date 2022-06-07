@@ -23,11 +23,18 @@ void Chase::execute(Field &field) {
                     bestPosition = &adjacentPosition;
                 }
             }
-            _subject.setPosition(*bestPosition);
+            if(*bestPosition == target->getPosition())
+                catchTarget(target);
+            else
+                _subject.setPosition(*bestPosition);
         }
     }
 }
 
 Chase::Chase(Humanoid &subject, const std::type_info &targetType) : Action(subject), _targetType(targetType) {}
+
+void Chase::catchTarget(Humanoid *target) {
+    target->kill();
+}
 
 

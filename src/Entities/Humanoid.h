@@ -3,11 +3,12 @@
 
 
 class Action;
-
+class Role;
 #include <cstdio>
 #include "../GameEnvironment/Position.h"
 #include "../Visitor/HumanoidVisitor.hpp"
 #include "../Actions/Action.h"
+#include "Role.hpp"
 
 /**
  * Represent a Humanoid in the Buffy vampire hunter game.
@@ -27,14 +28,18 @@ class Humanoid {
      */
     bool _isAlive;
 
-    std::shared_ptr<Action> _actionStrategy;
-protected:
+    std::unique_ptr<Role> _role;
+public:
+    const std::unique_ptr<Role> &getRole() const;
+
+private:
     /**
      * Constructs a humanoid at the given position.
      * @param position  The position of the humanoid.
      */
     Humanoid(const Position &position);
-    void setStrategy(const std::shared_ptr<Action> &actionStrategy);
+
+    void setRole(std::unique_ptr<Role> role);
 
 public:
     /**
@@ -61,11 +66,15 @@ public:
 
     void executeAction(Field& field);
 
-    virtual void setAction(const Field& field) = 0;
+    virtual void setAction(const Field& field);
 
-    virtual void accept(HumanoidVisitor &visitor) = 0;
+    void accept(HumanoidVisitor &visitor);
 
     void kill();
+
+    static Humanoid* createHuman(const Position &position);
+    static Humanoid* createVampire(const Position &position);
+    static Humanoid* createBuffy(const Position &position);
 };
 
 

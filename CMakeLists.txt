@@ -24,6 +24,8 @@ add_executable(POA_L4 src/main.cpp
         src/Entities/Vampire.h
         src/Entities/Buffy.cpp
         src/Entities/Buffy.h
+        src/Entities/Role.cpp
+        src/Entities/Role.hpp
 
         src/Actions/Action.cpp
         src/Actions/Action.h
@@ -31,4 +33,6 @@ add_executable(POA_L4 src/main.cpp
         src/Actions/Flee.h
         src/Actions/Chase.cpp
         src/Actions/Chase.hpp
+        src/Actions/ChaseAndBite.cpp
+        src/Actions/ChaseAndBite.hpp
         )

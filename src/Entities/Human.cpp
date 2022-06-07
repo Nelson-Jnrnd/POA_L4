@@ -7,8 +7,8 @@
 #include <memory>
 #include "../Actions/Flee.h"
 
-Human::Human(const Position &position) : _flee(std::make_shared<Flee>(*this)),
-Humanoid(position){
+
+Human::Human(Humanoid &owner) : _flee(std::make_shared<Flee>(owner)), Role(owner) {
     setStrategy(_flee);
 }
 
