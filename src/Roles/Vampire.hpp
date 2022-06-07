@@ -15,6 +15,7 @@
  * @author André Marques Nora
  */
 class Vampire : public Role {
+    static const double ODDS_TO_TRANSFORM;
     std::shared_ptr<Action> _chaseHumans;
 public:
 

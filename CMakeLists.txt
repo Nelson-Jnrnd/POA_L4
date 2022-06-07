@@ -6,6 +6,9 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(POA_L4 src/main.cpp
         src/Roles/RoleVisitor.hpp
 
+        src/Random/Random.hpp
+        src/Random/Random.cpp
+
         src/Console/HumanoidDisplayer.cpp
         src/Console/HumanoidDisplayer.hpp
         src/Console/StreamField.cpp

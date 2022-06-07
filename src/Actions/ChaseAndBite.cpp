@@ -4,11 +4,13 @@
 
 #include "ChaseAndBite.hpp"
 #include "../Roles/Vampire.hpp"
+#include "../Random/Random.hpp"
 
-ChaseAndBite::ChaseAndBite(Humanoid &subject, const std::type_info &targetType) : Chase(subject, targetType) {
-
-}
+ChaseAndBite::ChaseAndBite(Humanoid &subject, const std::type_info &targetType, double oddsToTransform) : Chase(subject, targetType), _oddsToTransform(oddsToTransform) {}
 
 void ChaseAndBite::catchTarget(Humanoid *target) {
-    target->setRole(std::make_unique<Vampire>(Vampire(*target)));
+    if(Random::getInstance().getRandomDouble(0, 1) > _oddsToTransform)
+        target->kill();
+    else
+        target->setRole(std::make_unique<Vampire>(Vampire(*target)));
 }

@@ -16,8 +16,9 @@
  * @author 
  */
 class ChaseAndBite : public Chase{
+    double _oddsToTransform;
 public:
-    ChaseAndBite(Humanoid& subject, const std::type_info &targetType);
+    ChaseAndBite(Humanoid &subject, const std::type_info &targetType, double oddsToTransform);
 
 protected:
     void catchTarget(Humanoid *target) override;
