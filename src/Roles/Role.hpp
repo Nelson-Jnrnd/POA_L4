@@ -8,8 +8,8 @@
 class Action;
 
 #include <memory>
-#include "../GameEnvironment/Field.h"
-#include "../Visitor/HumanoidVisitor.hpp"
+#include "../Game/Field.h"
+#include "RoleVisitor.hpp"
 
 /**
  * Represent a Role
@@ -33,7 +33,7 @@ public:
 
     virtual void setAction(const Field& field) = 0;
 
-    virtual void accept(HumanoidVisitor &visitor) = 0;
+    virtual void accept(RoleVisitor &visitor) = 0;
 };
 
 

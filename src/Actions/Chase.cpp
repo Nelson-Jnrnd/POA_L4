@@ -3,10 +3,10 @@
 //
 
 #include "Chase.hpp"
-#include "../Entities/Vampire.h"
-#include "../Entities/Humanoid.h"
-#include "../Entities/Buffy.h"
-#include "../Entities/Human.h"
+#include "../Roles/Vampire.h"
+#include "../Game/Humanoid.h"
+#include "../Roles/Buffy.h"
+#include "../Roles/Human.h"
 
 
 void Chase::execute(Field &field) {

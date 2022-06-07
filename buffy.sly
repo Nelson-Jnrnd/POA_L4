@@ -20,7 +20,7 @@
         <variable const="false" name="newStrategy" type="const_shared_ptr&lt;Action&gt;&amp;"/>
       </method>
       <method isAbstract="true" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="HumanoidVisitor&amp;"/>
+        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
       </method>
       <method isAbstract="true" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="field" type="const_Field&amp;"/>
@@ -191,7 +191,7 @@
     <entity entityType="CLASS" id="92469" isAbstract="false" name="Human" visibility="PUBLIC">
       <method is-constructor="true" isAbstract="false" isStatic="false" name="Human" returnType="" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="HumanoidVisitor&amp;"/>
+        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="field" type="const_Field&amp;"/>
@@ -200,7 +200,7 @@
     <entity entityType="CLASS" id="92468" isAbstract="false" name="Vampire" visibility="PUBLIC">
       <method is-constructor="true" isAbstract="false" isStatic="false" name="Vampire" returnType="" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="HumanoidVisitor&amp;"/>
+        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="field" type="const_Field&amp;"/>
@@ -209,7 +209,7 @@
     <entity entityType="CLASS" id="92467" isAbstract="false" name="Buffy" visibility="PUBLIC">
       <method is-constructor="true" isAbstract="false" isStatic="false" name="Buffy" returnType="" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="HumanoidVisitor&amp;"/>
+        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="field" type="const_Field&amp;"/>
@@ -247,7 +247,7 @@
         <variable const="false" name="y" type="int"/>
       </method>
       <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="HumanoidVisitor&amp;"/>
+        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="const_getAdjacentPositions" returnType="vector&lt;Position&gt;" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="position" type="const_Position&amp;"/>
@@ -269,7 +269,7 @@
         <variable const="false" name="newPosition" type="const_Position&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="HumanoidVisitor&amp;"/>
+        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="field" type="const_Field&amp;"/>

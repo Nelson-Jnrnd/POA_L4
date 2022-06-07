@@ -4,8 +4,8 @@
 class Humanoid;
 class Field;
 
-#include "../GameEnvironment/Field.h"
-#include "../Entities/Humanoid.h"
+#include "../Game/Field.h"
+#include "../Game/Humanoid.h"
 
 class Action {
 protected:

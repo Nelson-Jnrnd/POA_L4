@@ -1,7 +1,7 @@
 #include "Humanoid.h"
-#include "Human.h"
-#include "Vampire.h"
-#include "Buffy.h"
+#include "../Roles/Human.h"
+#include "../Roles/Vampire.h"
+#include "../Roles/Buffy.h"
 
 Humanoid::Humanoid(const Position &position)
 : _position(position), _isAlive(true) {}
@@ -22,7 +22,7 @@ void Humanoid::kill() {
     _isAlive = false;
 }
 
-void Humanoid::accept(HumanoidVisitor &visitor) {
+void Humanoid::accept(RoleVisitor &visitor) {
     _role->accept(visitor);
 }
 

@@ -6,7 +6,7 @@
 #define POA_L4_CHASE_HPP
 
 #include "Action.h"
-#include "../GameEnvironment/Field.h"
+#include "../Game/Field.h"
 
 
 /**

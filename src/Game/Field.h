@@ -6,7 +6,7 @@
 #include <memory>
 #include <list>
 #include <vector>
-#include "../Entities/Humanoid.h"
+#include "Humanoid.h"
 
 /**
  * Represent the Field of the buffy vampire hunter game.
@@ -78,7 +78,7 @@ public:
      * The visitor will visit all humanoids in the field.
      * @param visitor The visitor.
      */
-    void accept(HumanoidVisitor &visitor);
+    void accept(RoleVisitor &visitor);
 
 
     std::vector<Position> getAdjacentPositions(const Position& position) const;

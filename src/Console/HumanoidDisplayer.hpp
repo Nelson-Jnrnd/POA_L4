@@ -6,8 +6,8 @@
 #define POA_L4_HUMANOIDDISPLAYER_HPP
 
 
-#include "../Visitor/HumanoidVisitor.hpp"
-#include "../Entities/Humanoid.h"
+#include "../Roles/RoleVisitor.hpp"
+#include "../Game/Humanoid.h"
 #include <cstdio>
 #include <iostream>
 
@@ -19,7 +19,7 @@
  * @author Nelson Jeanrenaud
  * @author André Marques Nora
  */
-class HumanoidDisplayer : public HumanoidVisitor {
+class HumanoidDisplayer : public RoleVisitor {
     /**
      * The output char of the last Humanoid visited.
      */

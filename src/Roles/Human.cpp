@@ -12,7 +12,7 @@ Human::Human(Humanoid &owner) : _flee(std::make_shared<Flee>(owner)), Role(owner
     setStrategy(_flee);
 }
 
-void Human::accept(HumanoidVisitor &visitor) {
+void Human::accept(RoleVisitor &visitor) {
     visitor.visit(*this);
 }
 

@@ -5,10 +5,10 @@
 class Action;
 class Role;
 #include <cstdio>
-#include "../GameEnvironment/Position.h"
-#include "../Visitor/HumanoidVisitor.hpp"
+#include "Position.h"
+#include "../Roles/RoleVisitor.hpp"
 #include "../Actions/Action.h"
-#include "Role.hpp"
+#include "../Roles/Role.hpp"
 
 /**
  * Represent a Humanoid in the Buffy vampire hunter game.
@@ -67,7 +67,7 @@ public:
 
     virtual void setAction(const Field& field);
 
-    void accept(HumanoidVisitor &visitor);
+    void accept(RoleVisitor &visitor);
 
     void kill();
 

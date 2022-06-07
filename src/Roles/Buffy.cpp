@@ -15,7 +15,7 @@ Buffy::Buffy(Humanoid& owner) : _chaseVampires(std::make_shared<Chase>(owner, ty
 }
 
 
-void Buffy::accept(HumanoidVisitor &visitor) {
+void Buffy::accept(RoleVisitor &visitor) {
     visitor.visit(*this);
 }
 

@@ -23,7 +23,7 @@ public:
 
     void setAction(const Field &field) override;
 
-    void accept(HumanoidVisitor &visitor) override;
+    void accept(RoleVisitor &visitor) override;
 };
 
 

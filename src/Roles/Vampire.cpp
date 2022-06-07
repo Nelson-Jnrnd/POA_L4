@@ -13,7 +13,7 @@ Vampire::Vampire(Humanoid& owner) : _chaseHumans(std::make_shared<ChaseAndBite>(
     setStrategy(_chaseHumans);
 }
 
-void Vampire::accept(HumanoidVisitor &visitor) {
+void Vampire::accept(RoleVisitor &visitor) {
     visitor.visit(*this);
 }
 

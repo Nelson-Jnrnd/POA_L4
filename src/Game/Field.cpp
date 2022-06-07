@@ -3,9 +3,9 @@
 //
 
 #include "Field.h"
-#include "../Entities/Human.h"
-#include "../Entities/Vampire.h"
-#include "../Entities/Buffy.h"
+#include "../Roles/Human.h"
+#include "../Roles/Vampire.h"
+#include "../Roles/Buffy.h"
 
 
 using std::list;
@@ -24,7 +24,7 @@ void Field::addBuffy(int x, int y) {
     _humanoids.push_back(Humanoid::createHumanoid<Buffy>(Position(x, y)));
 }
 
-void Field::accept(HumanoidVisitor &visitor) {
+void Field::accept(RoleVisitor &visitor) {
     for (auto &humanoid : _humanoids) {
         humanoid->accept(visitor);
     }

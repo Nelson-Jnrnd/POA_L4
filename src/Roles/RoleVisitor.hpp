@@ -2,8 +2,8 @@
 // Created by NelsonWork on 06.06.2022.
 //
 
-#ifndef POA_L4_HUMANOIDVISITOR_HPP
-#define POA_L4_HUMANOIDVISITOR_HPP
+#ifndef POA_L4_ROLEVISITOR_HPP
+#define POA_L4_ROLEVISITOR_HPP
 
 
 class Vampire;
@@ -11,15 +11,15 @@ class Human;
 class Buffy;
 
 /**
- * Represent a HumanoidVisitor
+ * Represent a RoleVisitor
  * @version 1.0
  * @date 06.06.2022
  * @author Nelson Jeanrenaud
  * @author 
  */
-class HumanoidVisitor {
+class RoleVisitor {
 public:
-    virtual ~HumanoidVisitor() = default;
+    virtual ~RoleVisitor() = default;
 
     virtual void visit(Human &human) = 0;
 
@@ -29,4 +29,4 @@ public:
 };
 
 
-#endif //POA_L4_HUMANOIDVISITOR_HPP
+#endif //POA_L4_ROLEVISITOR_HPP

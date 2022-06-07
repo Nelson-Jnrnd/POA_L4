@@ -3,7 +3,7 @@
 
 
 #include "Action.h"
-#include "../GameEnvironment/Field.h"
+#include "../Game/Field.h"
 
 class Flee : public Action {
 public:
