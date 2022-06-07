@@ -3,12 +3,17 @@
 //
 
 #include "Chase.hpp"
+#include "../Entities/Vampire.h"
+#include "../Entities/Humanoid.h"
+#include "../Entities/Buffy.h"
+#include "../Entities/Human.h"
+
 
 void Chase::execute(Field &field) {
     std::vector<Position> adjacentPositions (field.getAdjacentPositions(_subject.getPosition()));
 
     if(!adjacentPositions.empty()) {
-        std::shared_ptr<Humanoid> target = field.getClosestHumanoid(_subject, _targetType);
+        Humanoid* target = field.getClosestHumanoid(_subject, _targetType);
         if (target != nullptr) {
             Position* bestPosition = nullptr;
             for (auto &adjacentPosition : adjacentPositions) {

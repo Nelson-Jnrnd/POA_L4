@@ -11,15 +11,15 @@ using std::list;
 
 Field::Field(std::size_t width, std::size_t height) : _width(width), _height(height), _turn(0), _humanoids(){}
 
-void Field::addHuman(std::size_t x, std::size_t y) {
+void Field::addHuman(int x, int y) {
     _humanoids.push_back(new Human(Position(x, y)));
 }
 
-void Field::addVampire(std::size_t x, std::size_t y) {
+void Field::addVampire(int x, int y) {
     _humanoids.push_back(new Vampire(Position(x, y)));
 }
 
-void Field::addBuffy(std::size_t x, std::size_t y) {
+void Field::addBuffy(int x, int y) {
     _humanoids.push_back(new Buffy(Position(x, y)));
 }
 
@@ -43,7 +43,7 @@ const std::list<Humanoid*> &Field::getHumanoids() const {
 
 std::vector<Position> Field::getAdjacentPositions(const Position &position) const {
     std::vector<Position> adjacentPositions;
-    adjacentPositions.reserve(8);
+    adjacentPositions.reserve(9);
 
     size_t minX = position.getX() > 1 ? position.getX() - 1 : 0;
     size_t minY = position.getY() > 1 ? position.getY() - 1 : 0;
@@ -52,9 +52,7 @@ std::vector<Position> Field::getAdjacentPositions(const Position &position) cons
 
     for (size_t x = minX; x <= maxX; x++) {
         for (size_t y = minY; y <= maxY; y++) {
-            if(x != position.getX() || y != position.getY()) {
                 adjacentPositions.emplace_back(x, y);
-            }
         }
     }
     adjacentPositions.shrink_to_fit();
@@ -80,14 +78,14 @@ unsigned Field::nextTurn()
     return _turn++;
 }
 
-std::shared_ptr<Humanoid> Field::getClosestHumanoid(const Humanoid &humanoid, const std::type_info &type) const {
+Humanoid* Field::getClosestHumanoid(const Humanoid &humanoid, const std::type_info &type) const {
 
-    std::shared_ptr<Humanoid> closestHumanoid;
-        for (auto &_humanoid : _humanoids) {
-            if (typeid(_humanoid) == type) {
-                if (!closestHumanoid || _humanoid->getPosition().getEuclideanDistance(humanoid.getPosition()) <
-                        closestHumanoid->getPosition().getEuclideanDistance(humanoid.getPosition())) {
-                    closestHumanoid = std::shared_ptr<Humanoid>(_humanoid);
+    Humanoid* closestHumanoid = nullptr;
+        for (Humanoid* humanoidOnBoard : _humanoids) {
+            if (type == typeid(*humanoidOnBoard)) {
+                if (closestHumanoid == nullptr || humanoidOnBoard->getPosition().getEuclideanDistance(humanoid.getPosition()) <
+                                        closestHumanoid->getPosition().getEuclideanDistance(humanoid.getPosition())) {
+                    closestHumanoid = humanoidOnBoard;
                 }
             }
         }

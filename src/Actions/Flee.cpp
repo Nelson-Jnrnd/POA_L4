@@ -16,6 +16,6 @@ void Flee::execute(Field &field) {
 
         Position &randomPosition = adjacentPositions.at(dist(mt));
 
-        _subject.setPosition(randomPosition);
+        //_subject.setPosition(randomPosition);
     }
 }
