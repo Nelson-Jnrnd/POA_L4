@@ -5,6 +5,7 @@
 #include <cstdio>
 #include <memory>
 #include <list>
+#include <vector>
 #include "../Entities/Humanoid.h"
 
 /**
@@ -24,10 +25,12 @@ class Field {
      */
     const std::size_t _height;
 
+    unsigned _turn;
+
     /**
      * The list of humanoids in the game. Can contain dead humanoids.
      */
-    std::list<std::unique_ptr<Humanoid>> _humanoids;
+    std::list<Humanoid*> _humanoids;
 
 public:
     /**
@@ -54,21 +57,21 @@ public:
      * @param x The x position of the human.
      * @param y The y position of the human.
      */
-    void addHuman(std::size_t x, std::size_t y);
+    void addHuman(int x, int y);
 
     /**
      * Adds a vampire to the field.
      * @param x The x position of the vampire.
      * @param y The y position of the vampire.
      */
-    void addVampire(std::size_t x, std::size_t y);
+    void addVampire(int x, int y);
 
     /**
      * Adds a buffy to the field.
      * @param x The x position of the buffy.
      * @param y The y position of the buffy.
      */
-    void addBuffy(std::size_t x, std::size_t y);
+    void addBuffy(int x, int y);
 
     /**
      * Accepts a visitor.
@@ -77,12 +80,19 @@ public:
      */
     void accept(HumanoidVisitor &visitor);
 
+
+    std::vector<Position> getAdjacentPositions(const Position& position) const;
+
+    Humanoid* getClosestHumanoid(const Humanoid& humanoid, const std::type_info& type) const;
+
+
+    virtual unsigned nextTurn();
 protected:
     /**
      * Gets the list of humanoids in the field.
      * @return The list of humanoids in the field.
      */
-    const std::list<std::unique_ptr<Humanoid>> &getHumanoids() const;
+    const std::list<Humanoid*> &getHumanoids() const;
 };
 
 

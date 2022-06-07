@@ -4,8 +4,17 @@
 
 #include "Human.h"
 
-Human::Human(const Position &position) : Humanoid(position){}
+#include <memory>
+#include "../Actions/Flee.h"
+
+Human::Human(const Position &position) : _flee(std::make_shared<Flee>(*this)),
+Humanoid(position){
+    setStrategy(_flee);
+}
 
 void Human::accept(HumanoidVisitor &visitor) {
     visitor.visit(*this);
+}
+
+void Human::setAction(const Field &field) {
 }

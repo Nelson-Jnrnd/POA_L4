@@ -2,6 +2,7 @@
 #define POA_L4_POSITION_H
 
 
+
 #include <cstdio>
 
 /**
@@ -12,8 +13,8 @@
  * @author André Marques Nora
  */
 class Position {
-    std::size_t _x;
-    std::size_t _y;
+    int _x;
+    int _y;
 
 public:
     /**
@@ -21,7 +22,7 @@ public:
      * @param x  The x coordinate.
      * @param y  The y coordinate.
      */
-    Position(std::size_t x, std::size_t y);
+    Position(int x, int y);
 
     /**
      * Constructs a position from another position.
@@ -33,25 +34,28 @@ public:
     * Gets the x coordinate.
     * @return  The x coordinate.
     */
-    std::size_t getX() const;
+    int getX() const;
 
     /**
      * Gets the y coordinate.
      * @return The y coordinate.
      */
-    std::size_t getY() const;
+    int getY() const;
 
     /**
      * Sets the x coordinate.
      * @param newX The new x coordinate.
      */
-    void setX(size_t newX);
+    void setX(int newX);
 
     /**
      * Sets the y coordinate.
      * @param newY The new y coordinate.
      */
-    void setY(size_t newY);
+    void setY(int newY);
+
+    bool operator==(const Position &other) const;
+    double getEuclideanDistance(const Position &position) const;
 };
 
 

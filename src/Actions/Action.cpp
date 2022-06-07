@@ -1,3 +1,3 @@
 #include "Action.h"
 
-Action::Action(Humanoid *humanoid) : humanoid(humanoid){}
+Action::Action(Humanoid &subject) : _subject(subject) {}
