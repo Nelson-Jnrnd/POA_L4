@@ -9,7 +9,7 @@
 #include <memory>
 
 Buffy::Buffy(const Position &position) : _chaseVampires(std::make_shared<Chase>(*this, typeid(Vampire))),
-                                         Humanoid(position){
+                                         Human(position){
     setStrategy(_chaseVampires);
 }
 
@@ -18,5 +18,10 @@ void Buffy::accept(HumanoidVisitor &visitor) {
 }
 
 void Buffy::setAction(const Field &field) {
+    if(field.getClosestHumanoid(*this, typeid(Vampire)) != nullptr) {
+        setStrategy(_chaseVampires);
+    } else {
+        setStrategy(_flee);
+    }
 }
 

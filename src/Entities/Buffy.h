@@ -2,7 +2,7 @@
 #define POA_L4_BUFFY_H
 
 
-#include "Humanoid.h"
+#include "Human.h"
 
 /**
  * Represent a Buffy in the Buffy vampire hunter game.
@@ -11,7 +11,7 @@
  * @author Nelson Jeanrenaud
  * @author André Marques Nora
  */
-class Buffy : public Humanoid {
+class Buffy : public Human {
     std::shared_ptr<Action> _chaseVampires;
 public:
     /**

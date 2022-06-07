@@ -12,6 +12,7 @@
  * @author André Marques Nora
  */
 class Human : public Humanoid {
+protected:
     std::shared_ptr<Action> _flee;
 public:
     /**

@@ -20,7 +20,6 @@ int main() {
     field.update();
     field.print();
 
-
     std::cout << "Adding Vampire" << std::endl;
     field.addVampire(3, 3);
     field.update();
