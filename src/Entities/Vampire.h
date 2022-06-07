@@ -5,8 +5,7 @@
 #ifndef POA_L4_VAMPIRE_H
 #define POA_L4_VAMPIRE_H
 
-
-#include "Humanoid.h"
+#include "Role.hpp"
 
 /**
  * Represent a Vampire
@@ -15,14 +14,11 @@
  * @author Nelson Jeanrenaud
  * @author André Marques Nora
  */
-class Vampire : public Humanoid {
+class Vampire : public Role {
     std::shared_ptr<Action> _chaseHumans;
 public:
-    /**
-     * Constructs a vampire at the given position.
-     * @param position  The position of the vampire.
-     */
-    Vampire(const Position &position);
+
+    Vampire(Humanoid& owner);
 
     void setAction(const Field &field) override;
 

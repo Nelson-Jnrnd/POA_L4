@@ -14,11 +14,7 @@
 class Buffy : public Human {
     std::shared_ptr<Action> _chaseVampires;
 public:
-    /**
-     * Constructs a Buffy at the given position.
-     * @param position  The position of the Buffy.
-     */
-    Buffy(const Position &position);
+    Buffy(Humanoid& owner);
 
     void setAction(const Field &field) override;
 

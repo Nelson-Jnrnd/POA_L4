@@ -17,10 +17,14 @@
  * @author 
  */
 class Chase : public Action {
-    const std::type_info &_targetType;
 public:
     Chase(Humanoid& subject, const std::type_info &targetType);
     void execute(Field& field) override;
+
+    virtual ~Chase() = default;
+protected:
+    const std::type_info &_targetType;
+    virtual void catchTarget(Humanoid *target);
 };
 
 #endif //POA_L4_CHASE_HPP

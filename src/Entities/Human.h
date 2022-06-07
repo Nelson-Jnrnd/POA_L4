@@ -2,7 +2,7 @@
 #define POA_L4_HUMAN_H
 
 
-#include "Humanoid.h"
+#include "Role.hpp"
 
 /**
  * Represent a Human in the Buffy vampire hunter game.
@@ -11,7 +11,7 @@
  * @author Nelson Jeanrenaud
  * @author André Marques Nora
  */
-class Human : public Humanoid {
+class Human : public Role {
 protected:
     std::shared_ptr<Action> _flee;
 public:
@@ -19,7 +19,7 @@ public:
      * Constructs a Human at the given position.
      * @param position  The position of the human.
      */
-    Human(const Position &position);
+    Human(Humanoid& owner);
 
     void setAction(const Field &field) override;
 

@@ -4,10 +4,12 @@
 
 #include "Vampire.h"
 #include "Human.h"
-#include "../Actions/Chase.hpp"
+#include "../Actions/ChaseAndBite.hpp"
 
-Vampire::Vampire(const Position &position) : _chaseHumans(std::make_shared<Chase>(*this, typeid(Human))),
-                                             Humanoid(position){
+
+
+Vampire::Vampire(Humanoid& owner) : _chaseHumans(std::make_shared<ChaseAndBite>(owner, typeid(Human))),
+                     Role(owner){
     setStrategy(_chaseHumans);
 }
 
@@ -18,3 +20,4 @@ void Vampire::accept(HumanoidVisitor &visitor) {
 void Vampire::setAction(const Field &field) {
 
 }
+
