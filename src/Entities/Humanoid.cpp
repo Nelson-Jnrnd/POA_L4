@@ -39,26 +39,9 @@ void Humanoid::executeAction(Field &field) {
     _role->executeAction(field);
 }
 
-Humanoid* Humanoid::createHuman(const Position &position) {
-    Humanoid* newHuman = new Humanoid(position);
-    newHuman->setRole(std::make_unique<Human>(Human(*newHuman)));
-    return newHuman;
-}
-
-Humanoid *Humanoid::createVampire(const Position &position) {
-    Humanoid* newHuman = new Humanoid(position);
-    newHuman->setRole(std::make_unique<Vampire>(Vampire(*newHuman)));
-    return newHuman;
-}
-
-Humanoid *Humanoid::createBuffy(const Position &position) {
-    Humanoid* newHuman = new Humanoid(position);
-    newHuman->setRole(std::make_unique<Buffy>(Buffy(*newHuman)));
-    return newHuman;
-}
-
 const std::unique_ptr<Role> &Humanoid::getRole() const {
     return _role;
 }
+
 
 

@@ -32,7 +32,7 @@ class Humanoid {
 public:
     const std::unique_ptr<Role> &getRole() const;
 
-private:
+//private:
     /**
      * Constructs a humanoid at the given position.
      * @param position  The position of the humanoid.
@@ -71,9 +71,12 @@ public:
 
     void kill();
 
-    static Humanoid* createHuman(const Position &position);
-    static Humanoid* createVampire(const Position &position);
-    static Humanoid* createBuffy(const Position &position);
+    template <typename T>
+    static Humanoid* createHumanoid(const Position &position) {
+        Humanoid* newHuman = new Humanoid(position);
+        newHuman->setRole(std::make_unique<T>(T(*newHuman)));
+        return newHuman;
+    };
 };
 
 
