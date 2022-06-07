@@ -39,9 +39,8 @@ private:
      */
     Humanoid(const Position &position);
 
-    void setRole(std::unique_ptr<Role> role);
-
 public:
+    void setRole(std::unique_ptr<Role> role);
     /**
      * Destructs the humanoid.
      */

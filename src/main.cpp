@@ -21,7 +21,7 @@ int main() {
     field.print();
 
     std::cout << "Adding Vampire" << std::endl;
-    field.addVampire(3, 3);
+    field.addVampire(9, 3);
     field.update();
     field.print();
 

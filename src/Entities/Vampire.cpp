@@ -4,11 +4,11 @@
 
 #include "Vampire.h"
 #include "Human.h"
-#include "../Actions/Chase.hpp"
+#include "../Actions/ChaseAndBite.hpp"
 
 
 
-Vampire::Vampire(Humanoid& owner) : _chaseHumans(std::make_shared<Chase>(owner, typeid(Human))),
+Vampire::Vampire(Humanoid& owner) : _chaseHumans(std::make_shared<ChaseAndBite>(owner, typeid(Human))),
                      Role(owner){
     setStrategy(_chaseHumans);
 }
