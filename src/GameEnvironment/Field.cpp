@@ -7,20 +7,21 @@
 #include "../Entities/Vampire.h"
 #include "../Entities/Buffy.h"
 
+
 using std::list;
 
 Field::Field(std::size_t width, std::size_t height) : _width(width), _height(height), _turn(0), _humanoids(){}
 
 void Field::addHuman(int x, int y) {
-    _humanoids.push_back(Humanoid::createHuman(Position(x, y)));
+    _humanoids.push_back(Humanoid::createHumanoid<Human>(Position(x, y)));
 }
 
 void Field::addVampire(int x, int y) {
-    _humanoids.push_back(Humanoid::createVampire(Position(x, y)));
+    _humanoids.push_back(Humanoid::createHumanoid<Vampire>(Position(x, y)));
 }
 
 void Field::addBuffy(int x, int y) {
-    _humanoids.push_back(Humanoid::createBuffy(Position(x, y)));
+    _humanoids.push_back(Humanoid::createHumanoid<Buffy>(Position(x, y)));
 }
 
 void Field::accept(HumanoidVisitor &visitor) {
