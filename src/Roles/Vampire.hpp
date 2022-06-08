@@ -15,7 +15,13 @@
  * @author André Marques Nora
  */
 class Vampire : public Role {
+    /**
+     * Odds a vampire has to transform a human into a vampire
+     */
     static const double ODDS_TO_TRANSFORM;
+    /**
+     * Action to chase and transform humans into vampires
+     */
     std::shared_ptr<Action> _chaseHumans;
 public:
 

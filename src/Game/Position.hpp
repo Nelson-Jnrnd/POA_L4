@@ -54,8 +54,15 @@ public:
      */
     void setY(int newY);
 
-    bool operator==(const Position &other) const;
+    /**
+     * Gets the distance between two positions.
+     * @param position the other position
+     * @return  The distance between the two positions.
+     */
     double getEuclideanDistance(const Position &position) const;
+
+    bool operator==(const Position &other) const;
+
 };
 
 

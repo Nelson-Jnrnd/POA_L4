@@ -20,6 +20,7 @@ void Buffy::accept(RoleVisitor &visitor) {
 }
 
 void Buffy::setAction(const Field &field) {
+    // If there is no more vampire to kill, buffy is moving randomly
     if(field.getClosestHumanoid(this->getOwner(), typeid(Vampire)) != nullptr) {
         setStrategy(_chaseVampires);
     } else {

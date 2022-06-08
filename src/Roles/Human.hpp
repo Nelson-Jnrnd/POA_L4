@@ -13,11 +13,14 @@
  */
 class Human : public Role {
 protected:
+    /**
+     * Action to flee and move randomly
+     */
     std::shared_ptr<Action> _flee;
 public:
     /**
-     * Constructs a Human at the given position.
-     * @param position  The position of the human.
+     * Constructs a Human role for a given Humanoid.
+     * @param owner The humanoid that is playing the role.
      */
     Human(Humanoid& owner);
 
