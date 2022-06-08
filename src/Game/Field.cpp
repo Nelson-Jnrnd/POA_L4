@@ -44,8 +44,9 @@ const std::list<Humanoid*> &Field::getHumanoids() const {
 
 std::vector<Position> Field::getAdjacentPositions(const Position &position) const {
     std::vector<Position> adjacentPositions;
-    adjacentPositions.reserve(9);
+    adjacentPositions.reserve(9); // 9 is the maximum amount of positions we could ever be adjacent to.
 
+    // Calculates if the position is near the edge of the board.
     size_t minX = position.getX() > 1 ? position.getX() - 1 : 0;
     size_t minY = position.getY() > 1 ? position.getY() - 1 : 0;
     size_t maxX = position.getX() + 1 < getWidth() ? position.getX() + 1 : getWidth() - 1;
@@ -83,7 +84,9 @@ Humanoid* Field::getClosestHumanoid(const Humanoid &humanoid, const std::type_in
 
     Humanoid* closestHumanoid = nullptr;
         for (Humanoid* humanoidOnBoard : _humanoids) {
+            // Check if the humanoid is of the type we are looking for.
             if (type == typeid(*humanoidOnBoard->getRole())) {
+                // Check if he's the closest one we know of so far.
                 if (closestHumanoid == nullptr || humanoidOnBoard->getPosition().getEuclideanDistance(humanoid.getPosition()) <
                                         closestHumanoid->getPosition().getEuclideanDistance(humanoid.getPosition())) {
                     closestHumanoid = humanoidOnBoard;

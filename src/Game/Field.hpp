@@ -25,6 +25,9 @@ class Field {
      */
     const std::size_t _height;
 
+    /**
+     * Number of turns simulated by the field.
+     */
     unsigned _turn;
 
     /**
@@ -80,12 +83,26 @@ public:
      */
     void accept(RoleVisitor &visitor);
 
-
+    /**
+     * Returns the adjacent positions to the one given in parameter.
+     * The position given is considered adjacent to itself.
+     * @param position "source" position.
+     * @return Positions adjacent to the given position.
+     */
     std::vector<Position> getAdjacentPositions(const Position& position) const;
 
+    /**
+     * Returns the closest humanoid of the given type to the given humanoid.
+     * @param humanoid The "source" humanoid to which the returned humanoid is closest to.
+     * @param type The type of humanoid to search.
+     * @return The closest humanoid.
+     */
     Humanoid* getClosestHumanoid(const Humanoid& humanoid, const std::type_info& type) const;
 
-
+    /**
+     * Simulates a turn of the game.
+     * @return The current turn.
+     */
     virtual unsigned nextTurn();
 protected:
     /**

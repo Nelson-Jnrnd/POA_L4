@@ -28,11 +28,18 @@ class Humanoid {
      */
     bool _isAlive;
 
+    /**
+     * The role of the humanoid in the game. Determines the actions that the humanoid can do and when he will do them.
+     */
     std::unique_ptr<Role> _role;
 public:
+    /**
+     * Returns the role of the humanoid.
+     * @return The role of the humanoid.
+     */
     const std::unique_ptr<Role> &getRole() const;
 
-//private:
+private:
     /**
      * Constructs a humanoid at the given position.
      * @param position  The position of the humanoid.
@@ -40,6 +47,10 @@ public:
     Humanoid(const Position &position);
 
 public:
+    /**
+     * Give the humanoid the role specified in the parameter.
+     * @param role The role of the humanoid.
+     */
     void setRole(std::unique_ptr<Role> role);
     /**
      * Destructs the humanoid.
@@ -63,14 +74,31 @@ public:
      */
     void setPosition(const Position &newPosition);
 
+    /**
+     * Execute the action of the humanoid.
+     * @param field The field where the humanoid is.
+     */
     void executeAction(Field& field);
 
+    /**
+     * Set the action the humanoid will do next.
+     * @param field The field where the humanoid is.
+     */
     virtual void setAction(const Field& field);
 
     void accept(RoleVisitor &visitor);
 
+    /**
+     * Kill the humanoid.
+     */
     void kill();
 
+    /**
+     * Create a humanoid of the specified type at the given position.
+     * @tparam T The type of the humanoid.
+     * @param position The position of the humanoid.
+     * @return The newly created humanoid.
+     */
     template <typename T>
     static Humanoid* createHumanoid(const Position &position) {
         Humanoid* newHuman = new Humanoid(position);
