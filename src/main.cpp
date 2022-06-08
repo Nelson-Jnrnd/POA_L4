@@ -35,6 +35,6 @@ int main() {
         field.print();*/
 
     Simulation simulation(100, 100);
-    simulation.simulate(10, 10, 1);
+    simulation.simulate(10, 10, 1, 10000);
     return EXIT_SUCCESS;
 }

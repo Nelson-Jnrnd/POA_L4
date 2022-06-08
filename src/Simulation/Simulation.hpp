@@ -12,12 +12,14 @@
  * @author 
  */
 class Simulation {
-    Field _field;
+    std::unique_ptr<Field> _field;
 
 public:
     Simulation(int width, int height);
 
-    void simulate(int nbHumans, int nbVampires, int nbBuffy);
+    bool simulate(int nbHumans, int nbVampires, int nbBuffy);
+
+    void simulate(int nbHumans, int nbVampires, int nbBuffy, int nbSimulations);
 };
 
 
