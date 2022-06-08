@@ -20,3 +20,7 @@ void Vampire::accept(RoleVisitor &visitor) {
 void Vampire::setAction(const Field &field) {
 }
 
+int Vampire::getSpeed() const {
+    return 1;
+}
+
