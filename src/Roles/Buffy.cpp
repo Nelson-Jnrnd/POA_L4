@@ -28,3 +28,7 @@ void Buffy::setAction(const Field &field) {
     }
 }
 
+int Buffy::getSpeed() const {
+    return 2;
+}
+

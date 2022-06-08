@@ -7,11 +7,14 @@
 Flee::Flee(Humanoid &subject) : Action(subject) {}
 
 void Flee::execute(Field &field) {
-    std::vector<Position> adjacentPositions (field.getAdjacentPositions(_subject.getPosition()));
+    for (int i = 0; i < _subject.getRole()->getSpeed(); ++i) {
+        std::vector<Position> adjacentPositions(field.getAdjacentPositions(_subject.getPosition()));
 
-    if(!adjacentPositions.empty()) {
-        Position &randomPosition = adjacentPositions.at(Random::getInstance().getRandomInt(0, adjacentPositions.size() - 1));
+        if (!adjacentPositions.empty()) {
+            Position &randomPosition = adjacentPositions.at(
+                    Random::getInstance().getRandomInt(0, adjacentPositions.size() - 1));
 
-        _subject.setPosition(randomPosition);
+            _subject.setPosition(randomPosition);
+        }
     }
 }

@@ -27,6 +27,7 @@ class Role {
      * The humanoid that is playing the role.
      */
     Humanoid& _owner;
+
 protected:
     /**
      * Constructs a role for a given Humanoid.
@@ -60,6 +61,8 @@ public:
     virtual void setAction(const Field& field) = 0;
 
     virtual void accept(RoleVisitor &visitor) = 0;
+
+    virtual int getSpeed() const = 0;
 };
 
 

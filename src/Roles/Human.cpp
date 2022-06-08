@@ -18,3 +18,7 @@ void Human::accept(RoleVisitor &visitor) {
 
 void Human::setAction(const Field &field) {
 }
+
+int Human::getSpeed() const {
+    return 1;
+}

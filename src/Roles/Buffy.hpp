@@ -26,6 +26,8 @@ public:
     void setAction(const Field &field) override;
 
     void accept(RoleVisitor &visitor) override;
+
+    int getSpeed() const override;
 };
 
 
