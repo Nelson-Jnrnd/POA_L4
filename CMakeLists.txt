@@ -4,10 +4,11 @@ project(POA_L4)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(POA_L4 src/main.cpp
-        src/Roles/RoleVisitor.hpp
-
         src/Random/Random.hpp
         src/Random/Random.cpp
+
+        src/Simulation/Simulation.hpp
+        src/Simulation/Simulation.cpp
 
         src/Console/HumanoidDisplayer.cpp
         src/Console/HumanoidDisplayer.hpp
@@ -18,9 +19,10 @@ add_executable(POA_L4 src/main.cpp
         src/Game/Position.hpp
         src/Game/Field.cpp
         src/Game/Field.hpp
-
         src/Game/Humanoid.cpp
         src/Game/Humanoid.hpp
+
+        src/Roles/RoleVisitor.hpp
         src/Roles/Human.cpp
         src/Roles/Human.hpp
         src/Roles/Vampire.cpp

@@ -104,6 +104,8 @@ public:
      * @return The current turn.
      */
     virtual unsigned nextTurn();
+
+    int getNumberOfHumanoid(const std::type_info& type) const;
 protected:
     /**
      * Gets the list of humanoids in the field.
