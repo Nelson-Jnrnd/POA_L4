@@ -3,12 +3,13 @@
 #include "Roles/Vampire.hpp"
 #include "Roles/Buffy.hpp"
 #include "Console/StreamField.hpp"
+#include "Simulation/Simulation.hpp"
 
 int main() {
 
     std::cout << "- Test Labo 4 - " << std::endl;
 
-    StreamField field(std::cout, 10, 5);
+/*    StreamField field(std::cout, 10, 5);
 
     field.getAdjacentPositions(Position(0, 1));
 
@@ -31,6 +32,9 @@ int main() {
     field.print();
 
     while(field.nextTurn() < 10)
-        field.print();
+        field.print();*/
+
+    Simulation simulation(100, 100);
+    simulation.simulate(10, 10, 1, 10000);
     return EXIT_SUCCESS;
 }
