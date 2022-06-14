@@ -82,7 +82,7 @@ public:
      * Set the action the humanoid will do next.
      * @param field The field where the humanoid is.
      */
-    virtual void setAction(const Field& field);
+    void setAction(const Field& field);
 
     void accept(RoleVisitor &visitor);
 
