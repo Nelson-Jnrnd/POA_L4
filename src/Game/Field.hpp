@@ -91,8 +91,6 @@ public:
      */
     std::vector<Position> getAdjacentPositions(const Position& position) const;
 
-    std::vector<Position> getPositionAtDistance(const Position& position, int distance) const;
-
     /**
      * Returns the closest humanoid of the given type to the given humanoid.
      * @param humanoid The "source" humanoid to which the returned humanoid is closest to.
