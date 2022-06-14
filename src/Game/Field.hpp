@@ -34,12 +34,6 @@ class Field {
      * The list of humanoids in the game. Can contain dead humanoids.
      */
     std::list<Humanoid*> _humanoids;
-protected:
-    /**
-     * Gets the list of humanoids in the field.
-     * @return The list of humanoids in the field.
-     */
-    const std::list<Humanoid*> &getHumanoids() const;
 
 public:
     /**
@@ -48,6 +42,12 @@ public:
      * @param height The height of the field.
      */
     Field(std::size_t width, std::size_t height);
+
+    /**
+     * Gets the list of humanoids in the field.
+     * @return The list of humanoids in the field.
+     */
+    const std::list<Humanoid*> &getHumanoids() const;
 
     /**
      * Get the width of the field.
