@@ -20,12 +20,14 @@ protected:
      * The humanoid that is performing the action.
      */
     Humanoid& _subject;
-public:
+
     /**
      * Constructs an action for a given Humanoid.
      * @param subject The humanoid that is performing the action.
      */
     Action(Humanoid& subject);
+public:
+
     /**
      * Execute the action.
      * @param field The field where the action will be performed.

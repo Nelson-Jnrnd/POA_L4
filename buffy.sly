@@ -347,7 +347,7 @@
       <method isAbstract="false" isStatic="false" name="nextTurn" returnType="unsigned" view="DEFAULT" visibility="PUBLIC"/>
     </entity>
     <entity entityType="CLASS" id="92465" isAbstract="true" name="Action" visibility="PUBLIC">
-      <method is-constructor="true" isAbstract="true" isStatic="false" name="Action" returnType="" view="DEFAULT" visibility="PUBLIC">
+      <method is-constructor="true" isAbstract="true" isStatic="false" name="Action" returnType="" view="DEFAULT" visibility="PROTECTED">
         <variable const="false" name="subject" type="Humanoid&amp;"/>
       </method>
       <method is-constructor="true" isAbstract="true" isStatic="false" name="~Action" returnType="" view="DEFAULT" visibility="PUBLIC"/>
