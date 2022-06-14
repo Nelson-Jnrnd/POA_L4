@@ -15,16 +15,16 @@ bool Simulation::simulate(int width, int height, int nbHumans, int nbVampires, i
     populate(field, nbHumans, nbVampires, nbBuffy);
     while (true) {
         if(field.getNumberOfHumanoid(typeid(Human)) == 0)
-            return true;
-        if(field.getNumberOfHumanoid(typeid(Vampire)) == 0)
             return false;
+        if(field.getNumberOfHumanoid(typeid(Vampire)) == 0)
+            return true;
         field.nextTurn();
     }
 }
 
 void Simulation::simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy, int nbSimulations) {
     int nbTimesHumanWon = 0;
-    for (int i = 0; i < nbSimulations; i++) {
+    for (int i = 1; i <= nbSimulations; i++) {
         std::cout << "Simulation " << i << std::endl;
         if(simulate(width, height, nbHumans, nbVampires, nbBuffy))
             nbTimesHumanWon++;
@@ -52,9 +52,9 @@ bool Simulation::graphicSimulate(std::ostream& output, int width, int height, in
     populate(field, nbHumans, nbVampires, nbBuffy);
     while (true) {
         if(field.getNumberOfHumanoid(typeid(Human)) == 0)
-            return true;
-        if(field.getNumberOfHumanoid(typeid(Vampire)) == 0)
             return false;
+        if(field.getNumberOfHumanoid(typeid(Vampire)) == 0)
+            return true;
         field.nextTurn();
         field.print();
     }

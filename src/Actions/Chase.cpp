@@ -11,7 +11,8 @@
 
 void Chase::execute(Field &field) {
 
-    for(int i = 0; i < _subject.getRole()->getSpeed(); i++) {
+    const int subjectSpeed = _subject.getRole()->getSpeed();
+    for(int i = 0; i < subjectSpeed; i++) {
         std::vector<Position> adjacentPositions(field.getAdjacentPositions(_subject.getPosition()));
 
         if (!adjacentPositions.empty()) {
@@ -25,7 +26,7 @@ void Chase::execute(Field &field) {
                         bestPosition = &adjacentPosition;
                     }
                 }
-                if (*bestPosition == target->getPosition())
+                if (*bestPosition == target->getPosition() && (subjectSpeed > i + 1 || subjectSpeed == 1))
                     catchTarget(target);
                 else
                     _subject.setPosition(*bestPosition);
