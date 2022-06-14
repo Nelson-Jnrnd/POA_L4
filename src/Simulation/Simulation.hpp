@@ -12,15 +12,15 @@
  * @author 
  */
 class Simulation {
-    void populate(Field& field, int nbHumans, int nbVampires, int nbBuffy);
+    static void populate(Field& field, int nbHumans, int nbVampires, int nbBuffy);
 public:
-    Simulation() = default;
+    Simulation() = delete;
 
-    bool simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+    static bool simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy);
 
-    void simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy, int nbSimulations);
+    static void simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy, int nbSimulations);
 
-    bool graphicSimulate(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+    static bool graphicSimulate(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
 
 };
 

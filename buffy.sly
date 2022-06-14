@@ -15,21 +15,21 @@
         </multiplicity>
       </role>
     </association>
-    <entity entityType="CLASS" id="112455" isAbstract="false" name="Simulation" visibility="PUBLIC">
-      <method isAbstract="false" isStatic="false" name="populate" returnType="void" view="DEFAULT" visibility="PRIVATE">
+    <entity entityType="CLASS" id="112455" isAbstract="true" name="Simulation" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="true" name="populate" returnType="void" view="DEFAULT" visibility="PRIVATE">
         <variable const="false" name="field" type="Field&amp;"/>
         <variable const="false" name="nbHumans" type="int"/>
         <variable const="false" name="nbVampires" type="int"/>
         <variable const="false" name="nbBuffy" type="int"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="simulate" returnType="bool" view="DEFAULT" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="true" name="simulate" returnType="bool" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="width" type="int"/>
         <variable const="false" name="height" type="int"/>
         <variable const="false" name="nbHumans" type="int"/>
         <variable const="false" name="nbVampires" type="int"/>
         <variable const="false" name="nbBuffy" type="int"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="simulate" returnType="void" view="DEFAULT" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="true" name="simulate" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="width" type="int"/>
         <variable const="false" name="height" type="int"/>
         <variable const="false" name="nbHumans" type="int"/>
@@ -37,7 +37,7 @@
         <variable const="false" name="nbBuffy" type="int"/>
         <variable const="false" name="nbSimulations" type="int"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="graphicSimulate" returnType="bool" view="DEFAULT" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="true" name="graphicSimulate" returnType="bool" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="output" type="ostream&amp;"/>
         <variable const="false" name="width" type="int"/>
         <variable const="false" name="height" type="int"/>
@@ -313,7 +313,7 @@
         <variable const="false" name="width" type="size_t"/>
         <variable const="false" name="height" type="size_t"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="const_getHumanoids" returnType="list&lt;unique_ptr&lt;Humanoid&gt;&gt;&amp;" view="DEFAULT" visibility="PROTECTED"/>
+      <method isAbstract="false" isStatic="false" name="const_getHumanoids" returnType="list&lt;unique_ptr&lt;Humanoid&gt;&gt;&amp;" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="false" isStatic="false" name="const_getWidth" returnType="size_t" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="false" isStatic="false" name="const_getHeight" returnType="size_t" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="false" isStatic="false" name="const_getAdjacentPositions" returnType="vector&lt;Position&gt;" view="DEFAULT" visibility="PUBLIC">
