@@ -101,3 +101,8 @@ std::size_t Field::getNumberOfHumanoid(const std::type_info &type) const {
     }
     return numberOfHumanoid;
 }
+
+Field::~Field() {
+    for (auto & _humanoid : _humanoids)
+        delete _humanoid;
+}

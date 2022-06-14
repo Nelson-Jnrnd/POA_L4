@@ -105,6 +105,11 @@ public:
     virtual unsigned nextTurn();
 
     std::size_t getNumberOfHumanoid(const std::type_info& type) const;
+
+    /**
+     * Destructor.
+     */
+    virtual ~Field();
 };
 
 

@@ -38,7 +38,6 @@ class Humanoid {
      */
     std::shared_ptr<Action> _actionStrategy;
 
-
     /**
      * Constructs a humanoid at the given position.
      * @param position  The position of the humanoid.
