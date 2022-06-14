@@ -91,8 +91,8 @@ Humanoid* Field::getClosestHumanoid(const Humanoid &humanoid, const std::type_in
     return closestHumanoid;
 }
 
-int Field::getNumberOfHumanoid(const std::type_info &type) const {
-    int numberOfHumanoid = 0;
+std::size_t Field::getNumberOfHumanoid(const std::type_info &type) const {
+    size_t numberOfHumanoid = 0;
     for (Humanoid* humanoidOnBoard : _humanoids) {
         // Check if the humanoid is of the type we are looking for.
         if (type == typeid(*humanoidOnBoard->getRole())) {

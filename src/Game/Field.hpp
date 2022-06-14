@@ -104,7 +104,7 @@ public:
      */
     virtual unsigned nextTurn();
 
-    int getNumberOfHumanoid(const std::type_info& type) const;
+    std::size_t getNumberOfHumanoid(const std::type_info& type) const;
 };
 
 
