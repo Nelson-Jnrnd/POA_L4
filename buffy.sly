@@ -323,7 +323,7 @@
         <variable const="false" name="humanoid" type="const_Humanoid&amp;"/>
         <variable const="false" name="type" type="const_type_info&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="const_getNumberOfHumanoid" returnType="int" view="DEFAULT" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="false" name="const_getNumberOfHumanoid" returnType="size_t" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="type" type="const_type_info&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="addHuman" returnType="void" view="DEFAULT" visibility="PUBLIC">
