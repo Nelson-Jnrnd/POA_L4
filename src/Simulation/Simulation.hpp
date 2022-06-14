@@ -12,14 +12,16 @@
  * @author 
  */
 class Simulation {
-    std::unique_ptr<Field> _field;
-
+    void populate(Field& field, int nbHumans, int nbVampires, int nbBuffy);
 public:
-    Simulation(int width, int height);
+    Simulation() = default;
 
-    bool simulate(int nbHumans, int nbVampires, int nbBuffy);
+    bool simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy);
 
-    void simulate(int nbHumans, int nbVampires, int nbBuffy, int nbSimulations);
+    void simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy, int nbSimulations);
+
+    bool graphicSimulate(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+
 };
 
 

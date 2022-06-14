@@ -9,32 +9,10 @@ int main() {
 
     std::cout << "- Test Labo 4 - " << std::endl;
 
-/*    StreamField field(std::cout, 10, 5);
+    Simulation simulation;
 
-    field.getAdjacentPositions(Position(0, 1));
+    //simulation.graphicSimulate(std::cout, 50, 50, 20, 10, 1);
 
-    std::cout << "Empty Field" << std::endl;
-    field.print();
-
-    std::cout << "Adding Human" << std::endl;
-    field.addHuman(9, 1);
-    field.update();
-    field.print();
-
-    std::cout << "Adding Vampire" << std::endl;
-    field.addVampire(9, 3);
-    field.update();
-    field.print();
-
-    std::cout << "Adding Buffy" << std::endl;
-    field.addBuffy(9, 4);
-    field.update();
-    field.print();
-
-    while(field.nextTurn() < 10)
-        field.print();*/
-
-    Simulation simulation(100, 100);
-    simulation.simulate(10, 10, 1, 10000);
+    simulation.simulate(100, 100, 20, 10, 1, 100);
     return EXIT_SUCCESS;
 }
