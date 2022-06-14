@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="iso-8859-15" standalone="no"?>
 <classDiagram>
   <diagramElements defaultViewEntities="ALL" defaultViewEnum="true" defaultViewMethods="TYPE_AND_NAME" defaultVisibleTypes="true" informations="" name="Buffy">
+    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="113106" name="is done by">
+      <role componentId="92465" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+      <role componentId="92463" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+    </association>
     <entity entityType="CLASS" id="112455" isAbstract="false" name="Simulation" visibility="PUBLIC">
       <method isAbstract="false" isStatic="false" name="populate" returnType="void" view="DEFAULT" visibility="PRIVATE">
         <variable const="false" name="field" type="Field&amp;"/>
@@ -58,7 +72,7 @@
     <entity entityType="CLASS" id="111470" isAbstract="false" name="ChaseAndBIte" visibility="PUBLIC">
       <attribute const="false" defaultValue="" isStatic="false" name="_oddsToTransform" type="double" visibility="PRIVATE"/>
       <method is-constructor="true" isAbstract="false" isStatic="false" name="ChaseAndBIte" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="subject" type="Role&amp;"/>
+        <variable const="false" name="subject" type="Humanoid&amp;"/>
         <variable const="false" name="targetType" type="const_type_info&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="catchTarget" returnType="void" view="DEFAULT" visibility="PUBLIC">
@@ -129,7 +143,7 @@
         </multiplicity>
       </role>
     </association>
-    <association aggregation="NONE" direction="BIDIRECTIONAL" id="92860" name="is currently doing">
+    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="92860" name="is currently doing">
       <role componentId="105854" name="" visibility="PRIVATE">
         <multiplicity>
           <min>1</min>
@@ -334,7 +348,7 @@
     </entity>
     <entity entityType="CLASS" id="92465" isAbstract="true" name="Action" visibility="PUBLIC">
       <method is-constructor="true" isAbstract="true" isStatic="false" name="Action" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="subject" type="Role&amp;"/>
+        <variable const="false" name="subject" type="Humanoid&amp;"/>
       </method>
       <method is-constructor="true" isAbstract="true" isStatic="false" name="~Action" returnType="" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="true" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
@@ -406,7 +420,7 @@
     <entity entityType="CLASS" id="98030" isAbstract="false" name="Chase" visibility="PUBLIC">
       <attribute const="false" defaultValue="" isStatic="false" name="_targetType" type="const_type_info&amp;" visibility="PRIVATE"/>
       <method is-constructor="true" isAbstract="false" isStatic="false" name="Chase" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="subject" type="Role&amp;"/>
+        <variable const="false" name="subject" type="Humanoid&amp;"/>
         <variable const="false" name="targetType" type="const_type_info&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
@@ -926,6 +940,56 @@
         </point>
       </line>
     </relationView>
+    <relationView color="-12566464" relationId="113106">
+      <line>
+        <point>
+          <x>2211</x>
+          <y>671</y>
+        </point>
+        <point>
+          <x>1361</x>
+          <y>671</y>
+        </point>
+        <point>
+          <x>1361</x>
+          <y>491</y>
+        </point>
+        <point>
+          <x>1141</x>
+          <y>491</y>
+        </point>
+      </line>
+      <labelAssociation>
+        <x>1743</x>
+        <y>645</y>
+        <w>64</w>
+        <h>17</h>
+      </labelAssociation>
+      <roleAssociation>
+        <x>2175</x>
+        <y>675</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <roleAssociation>
+        <x>1145</x>
+        <y>495</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <multipliciteAssociation>
+        <x>2197</x>
+        <y>648</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+      <multipliciteAssociation>
+        <x>1145</x>
+        <y>468</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+    </relationView>
     <componentView color="-2079" componentID="105854" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
         <x>790</x>
@@ -1054,5 +1118,13 @@
         <h>115</h>
       </geometry>
     </componentView>
+    <note color="-2079" content="Action is done by the humanoid that owns the role doing the action...">
+      <noteGeometry>
+        <x>1640</x>
+        <y>760</y>
+        <w>200</w>
+        <h>60</h>
+      </noteGeometry>
+    </note>
   </umlView>
 </classDiagram>
