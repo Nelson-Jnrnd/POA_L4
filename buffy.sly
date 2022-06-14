@@ -303,7 +303,7 @@
       <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="field" type="Field&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="true" name="createHumanoid&lt;T&gt;" returnType="Humanoid*" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="true" name="createHumanoid&lt;Role&gt;" returnType="Humanoid*" view="DEFAULT" visibility="PUBLIC"/>
     </entity>
     <entity entityType="CLASS" id="92464" isAbstract="false" name="Field" visibility="PUBLIC">
       <attribute const="false" defaultValue="" isStatic="false" name="_width" type="size_t" visibility="PRIVATE"/>

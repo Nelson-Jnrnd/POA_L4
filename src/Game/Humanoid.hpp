@@ -91,14 +91,14 @@ public:
 
     /**
      * Create a humanoid of the specified type at the given position.
-     * @tparam T The type of the humanoid.
+     * @tparam Role The role of the humanoid.
      * @param position The position of the humanoid.
      * @return The newly created humanoid.
      */
-    template <typename T>
+    template <typename Role>
     static Humanoid* createHumanoid(const Position &position) {
         Humanoid* newHuman = new Humanoid(position);
-        newHuman->setRole(std::make_unique<T>(T(*newHuman)));
+        newHuman->setRole(std::make_unique<Role>(Role(*newHuman)));
         return newHuman;
     };
 };
