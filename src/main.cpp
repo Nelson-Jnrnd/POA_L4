@@ -11,7 +11,7 @@ int main() {
 
     Simulation simulation;
 
-    //simulation.graphicSimulate(std::cout, 10, 10, 10, 1, 0);
+    simulation.graphicSimulate(std::cout, 10, 10, 10, 1, 0);
 
     simulation.simulate(100, 100, 10, 10, 1, 100);
     return EXIT_SUCCESS;

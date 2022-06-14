@@ -21,7 +21,7 @@ void StreamField::update() {
     }
 
     for (auto &humanoid : Field::getHumanoids()) {
-        humanoid->accept(_displayer);
+        humanoid->getRole()->accept(_displayer);
         _field[humanoid->getPosition().getY()][humanoid->getPosition().getX()] = _displayer.getOutputChar();
     }
 }

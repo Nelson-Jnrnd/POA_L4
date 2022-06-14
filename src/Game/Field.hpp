@@ -83,13 +83,6 @@ public:
     void addBuffy(int x, int y);
 
     /**
-     * Accepts a visitor.
-     * The visitor will visit all humanoids in the field.
-     * @param visitor The visitor.
-     */
-    void accept(RoleVisitor &visitor);
-
-    /**
      * Returns the adjacent positions to the one given in parameter.
      * The position given is considered adjacent to itself.
      * @param position "source" position.

@@ -84,8 +84,6 @@ public:
      */
     void setAction(const Field& field);
 
-    void accept(RoleVisitor &visitor);
-
     /**
      * Kill the humanoid.
      */

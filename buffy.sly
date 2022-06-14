@@ -303,9 +303,6 @@
       <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="field" type="Field&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
-      </method>
       <method isAbstract="false" isStatic="true" name="createHumanoid&lt;T&gt;" returnType="Humanoid*" view="DEFAULT" visibility="PUBLIC"/>
     </entity>
     <entity entityType="CLASS" id="92464" isAbstract="false" name="Field" visibility="PUBLIC">
@@ -340,9 +337,6 @@
       <method isAbstract="false" isStatic="false" name="addBuffy" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="x" type="int"/>
         <variable const="false" name="y" type="int"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="nextTurn" returnType="unsigned" view="DEFAULT" visibility="PUBLIC"/>
     </entity>
@@ -456,7 +450,7 @@
       <line>
         <point>
           <x>941</x>
-          <y>591</y>
+          <y>576</y>
         </point>
         <point>
           <x>941</x>
@@ -465,13 +459,13 @@
       </line>
       <labelAssociation>
         <x>948</x>
-        <y>613</y>
+        <y>605</y>
         <w>69</w>
         <h>17</h>
       </labelAssociation>
       <roleAssociation>
         <x>945</x>
-        <y>595</y>
+        <y>580</y>
         <w>0</w>
         <h>17</h>
       </roleAssociation>
@@ -483,7 +477,7 @@
       </roleAssociation>
       <multipliciteAssociation>
         <x>927</x>
-        <y>595</y>
+        <y>580</y>
         <w>8</w>
         <h>17</h>
       </multipliciteAssociation>
@@ -912,7 +906,7 @@
         </point>
         <point>
           <x>1601</x>
-          <y>301</y>
+          <y>286</y>
         </point>
       </line>
     </relationView>
@@ -1051,7 +1045,7 @@
         <x>1390</x>
         <y>20</y>
         <w>630</w>
-        <h>280</h>
+        <h>265</h>
       </geometry>
     </componentView>
     <componentView color="-2079" componentID="92463" displayAttributes="true" displayDefault="true" displayMethods="true">
@@ -1059,7 +1053,7 @@
         <x>710</x>
         <y>340</y>
         <w>430</w>
-        <h>250</h>
+        <h>235</h>
       </geometry>
     </componentView>
     <componentView color="-2079" componentID="93004" displayAttributes="true" displayDefault="true" displayMethods="true">

@@ -24,11 +24,6 @@ void Field::addBuffy(int x, int y) {
     _humanoids.push_back(Humanoid::createHumanoid<Buffy>(Position(x, y)));
 }
 
-void Field::accept(RoleVisitor &visitor) {
-    for (auto &humanoid : _humanoids) {
-        humanoid->accept(visitor);
-    }
-}
 
 std::size_t Field::getWidth() const {
     return _width;

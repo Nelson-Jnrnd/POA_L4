@@ -22,10 +22,6 @@ void Humanoid::kill() {
     _isAlive = false;
 }
 
-void Humanoid::accept(RoleVisitor &visitor) {
-    _role->accept(visitor);
-}
-
 void Humanoid::setRole(std::unique_ptr<Role> role) {
     _role = std::move(role);
 }
