@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-15" standalone="no"?>
 <classDiagram>
   <diagramElements defaultViewEntities="ALL" defaultViewEnum="true" defaultViewMethods="TYPE_AND_NAME" defaultVisibleTypes="true" informations="" name="Buffy">
-    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="113106" name="is done by">
+    <association aggregation="NONE" direction="BIDIRECTIONAL" id="113106" name="is currently doing">
       <role componentId="92465" name="" visibility="PRIVATE">
         <multiplicity>
           <min>1</min>
@@ -143,20 +143,6 @@
         </multiplicity>
       </role>
     </association>
-    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="92860" name="is currently doing">
-      <role componentId="105854" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>1</min>
-          <max>1</max>
-        </multiplicity>
-      </role>
-      <role componentId="92465" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>1</min>
-          <max>1</max>
-        </multiplicity>
-      </role>
-    </association>
     <association aggregation="NONE" direction="FIRST_TO_SECOND" id="92819" name="is at">
       <role componentId="92463" name="" visibility="PRIVATE">
         <multiplicity>
@@ -292,6 +278,9 @@
       <method isAbstract="false" isStatic="false" name="const_getRole" returnType="const_unique_ptr&lt;Role&gt;&amp;" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="false" isStatic="false" name="setPosition" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="newPosition" type="const_Position&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="setStrategy" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="newStrategy" type="const_shared_ptr&lt;Action&gt;&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="kill" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
       <method isAbstract="false" isStatic="false" name="setRole" returnType="void" view="DEFAULT" visibility="PUBLIC">
@@ -429,9 +418,6 @@
         <variable const="false" name="owner" type="Humanoid&amp;"/>
       </method>
       <method is-constructor="true" isAbstract="true" isStatic="false" name="~Role" returnType="" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="setStrategy" returnType="void" view="DEFAULT" visibility="PROTECTED">
-        <variable const="false" name="newStrategy" type="const_shared_ptr&lt;Action&gt;&amp;"/>
-      </method>
       <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="field" type="Field&amp;"/>
       </method>
@@ -450,7 +436,7 @@
       <line>
         <point>
           <x>941</x>
-          <y>576</y>
+          <y>591</y>
         </point>
         <point>
           <x>941</x>
@@ -459,13 +445,13 @@
       </line>
       <labelAssociation>
         <x>948</x>
-        <y>605</y>
+        <y>613</y>
         <w>69</w>
         <h>17</h>
       </labelAssociation>
       <roleAssociation>
         <x>945</x>
-        <y>580</y>
+        <y>595</y>
         <w>0</w>
         <h>17</h>
       </roleAssociation>
@@ -477,7 +463,7 @@
       </roleAssociation>
       <multipliciteAssociation>
         <x>927</x>
-        <y>580</y>
+        <y>595</y>
         <w>8</w>
         <h>17</h>
       </multipliciteAssociation>
@@ -676,48 +662,6 @@
         <h>17</h>
       </multipliciteAssociation>
     </relationView>
-    <relationView color="-12566464" relationId="92860">
-      <line>
-        <point>
-          <x>1231</x>
-          <y>711</y>
-        </point>
-        <point>
-          <x>2211</x>
-          <y>711</y>
-        </point>
-      </line>
-      <labelAssociation>
-        <x>1725</x>
-        <y>715</y>
-        <w>110</w>
-        <h>17</h>
-      </labelAssociation>
-      <roleAssociation>
-        <x>1235</x>
-        <y>715</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <roleAssociation>
-        <x>2205</x>
-        <y>715</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <multipliciteAssociation>
-        <x>1235</x>
-        <y>688</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
-      <multipliciteAssociation>
-        <x>2197</x>
-        <y>688</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
-    </relationView>
     <relationView color="-12566464" relationId="93087">
       <line>
         <point>
@@ -854,7 +798,7 @@
         </point>
         <point>
           <x>1011</x>
-          <y>836</y>
+          <y>821</y>
         </point>
       </line>
     </relationView>
@@ -874,7 +818,7 @@
         </point>
         <point>
           <x>1011</x>
-          <y>836</y>
+          <y>821</y>
         </point>
       </line>
     </relationView>
@@ -954,9 +898,9 @@
         </point>
       </line>
       <labelAssociation>
-        <x>1743</x>
-        <y>645</y>
-        <w>64</w>
+        <x>1728</x>
+        <y>650</y>
+        <w>110</w>
         <h>17</h>
       </labelAssociation>
       <roleAssociation>
@@ -989,7 +933,7 @@
         <x>790</x>
         <y>660</y>
         <w>440</w>
-        <h>175</h>
+        <h>160</h>
       </geometry>
     </componentView>
     <componentView color="-2079" componentID="98030" displayAttributes="true" displayDefault="true" displayMethods="true">
@@ -1053,7 +997,7 @@
         <x>710</x>
         <y>340</y>
         <w>430</w>
-        <h>235</h>
+        <h>250</h>
       </geometry>
     </componentView>
     <componentView color="-2079" componentID="93004" displayAttributes="true" displayDefault="true" displayMethods="true">

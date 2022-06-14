@@ -32,12 +32,16 @@ void Humanoid::setAction(const Field &field) {
 }
 
 void Humanoid::executeAction(Field &field) {
-    _role->executeAction(field);
+    if(_actionStrategy)
+        _actionStrategy->execute(field);
 }
 
 const std::unique_ptr<Role> &Humanoid::getRole() const {
     return _role;
 }
 
+void Humanoid::setStrategy(const std::shared_ptr<Action> &actionStrategy) {
+    _actionStrategy = actionStrategy;
+}
 
 

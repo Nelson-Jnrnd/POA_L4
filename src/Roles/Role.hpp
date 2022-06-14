@@ -20,10 +20,6 @@ class Action;
  */
 class Role {
     /**
-     * The action the role is currently doing.
-     */
-    std::shared_ptr<Action> _actionStrategy;
-    /**
      * The humanoid that is playing the role.
      */
     Humanoid& _owner;
@@ -34,11 +30,7 @@ protected:
      * @param owner  The humanoid that is playing the role.
      */
     explicit Role(Humanoid& owner);
-    /**
-     * Change the action that the role will perform.
-     * @param actionStrategy The action that the role will perform.
-     */
-    void setStrategy(const std::shared_ptr<Action> &actionStrategy);
+
 public:
     virtual ~Role() = default;
 
@@ -48,11 +40,6 @@ public:
      */
     Humanoid &getOwner() const;
 
-    /**
-     * Execute the action that the role is currently doing.
-     * @param field The field where the action will be performed.
-     */
-    void executeAction(Field& field);
 
     /**
      * Set the action that the role will perform. Depending on the state of the field.

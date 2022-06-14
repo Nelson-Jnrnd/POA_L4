@@ -9,7 +9,6 @@
 
 
 Human::Human(Humanoid &owner) : _flee(std::make_shared<Flee>(owner)), Role(owner) {
-    setStrategy(_flee);
 }
 
 void Human::accept(RoleVisitor &visitor) {
@@ -17,6 +16,7 @@ void Human::accept(RoleVisitor &visitor) {
 }
 
 void Human::setAction(const Field &field) {
+    getOwner().setStrategy(_flee);
 }
 
 int Human::getSpeed() const {

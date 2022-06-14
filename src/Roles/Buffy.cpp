@@ -11,7 +11,6 @@
 
 Buffy::Buffy(Humanoid& owner) : _chaseVampires(std::make_shared<Chase>(owner, typeid(Vampire))),
                                     Human(owner){
-    setStrategy(_chaseVampires);
 }
 
 
@@ -22,9 +21,9 @@ void Buffy::accept(RoleVisitor &visitor) {
 void Buffy::setAction(const Field &field) {
     // If there is no more vampire to kill, buffy is moving randomly
     if(field.getClosestHumanoid(this->getOwner(), typeid(Vampire)) != nullptr) {
-        setStrategy(_chaseVampires);
+        getOwner().setStrategy(_chaseVampires);
     } else {
-        setStrategy(_flee);
+        getOwner().setStrategy(_flee);
     }
 }
 

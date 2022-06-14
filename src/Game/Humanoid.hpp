@@ -34,6 +34,12 @@ class Humanoid {
     std::unique_ptr<Role> _role;
 
     /**
+     * The action the role is currently doing.
+     */
+    std::shared_ptr<Action> _actionStrategy;
+
+
+    /**
      * Constructs a humanoid at the given position.
      * @param position  The position of the humanoid.
      */
@@ -88,6 +94,12 @@ public:
      * Kill the humanoid.
      */
     void kill();
+
+    /**
+     * Change the action that the humanoid will perform.
+     * @param actionStrategy The action that the humanoid will perform.
+     */
+    void setStrategy(const std::shared_ptr<Action> &actionStrategy);
 
     /**
      * Create a humanoid of the specified type at the given position.
