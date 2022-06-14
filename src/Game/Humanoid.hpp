@@ -32,6 +32,12 @@ class Humanoid {
      * The role of the humanoid in the game. Determines the actions that the humanoid can do and when he will do them.
      */
     std::unique_ptr<Role> _role;
+
+    /**
+     * Constructs a humanoid at the given position.
+     * @param position  The position of the humanoid.
+     */
+    Humanoid(const Position &position);
 public:
     /**
      * Returns the role of the humanoid.
@@ -39,14 +45,6 @@ public:
      */
     const std::unique_ptr<Role> &getRole() const;
 
-private:
-    /**
-     * Constructs a humanoid at the given position.
-     * @param position  The position of the humanoid.
-     */
-    Humanoid(const Position &position);
-
-public:
     /**
      * Give the humanoid the role specified in the parameter.
      * @param role The role of the humanoid.

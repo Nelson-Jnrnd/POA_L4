@@ -34,6 +34,12 @@ class Field {
      * The list of humanoids in the game. Can contain dead humanoids.
      */
     std::list<Humanoid*> _humanoids;
+protected:
+    /**
+     * Gets the list of humanoids in the field.
+     * @return The list of humanoids in the field.
+     */
+    const std::list<Humanoid*> &getHumanoids() const;
 
 public:
     /**
@@ -106,12 +112,6 @@ public:
     virtual unsigned nextTurn();
 
     int getNumberOfHumanoid(const std::type_info& type) const;
-protected:
-    /**
-     * Gets the list of humanoids in the field.
-     * @return The list of humanoids in the field.
-     */
-    const std::list<Humanoid*> &getHumanoids() const;
 };
 
 
