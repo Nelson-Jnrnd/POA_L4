@@ -106,17 +106,3 @@ int Field::getNumberOfHumanoid(const std::type_info &type) const {
     }
     return numberOfHumanoid;
 }
-
-std::vector<Position> Field::getPositionAtDistance(const Position &position, int distance) const {
-    std::vector<Position> positions;
-    positions.reserve(distance * distance);
-    for (int x = position.getX() - distance; x <= position.getX() + distance; x++) {
-        for (int y = position.getY() - distance; y <= position.getY() + distance; y++) {
-            if (x >= 0 && x < getWidth() && y >= 0 && y < getHeight()) {
-                positions.emplace_back(x, y);
-            }
-        }
-    }
-    positions.shrink_to_fit();
-    return positions;
-}

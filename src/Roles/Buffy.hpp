@@ -15,7 +15,7 @@ class Buffy : public Human {
     /**
      * Action to chase and kill vampires
      */
-    std::shared_ptr<Action> _chaseVampires;
+    const std::shared_ptr<Action> _chaseVampires;
 public:
     /** TODO check si on peut mettre ça en privé :(
      * Constructs a Buffy for the humanoid.

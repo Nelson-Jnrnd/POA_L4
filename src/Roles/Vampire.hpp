@@ -22,7 +22,7 @@ class Vampire : public Role {
     /**
      * Action to chase and transform humans into vampires
      */
-    std::shared_ptr<Action> _chaseHumans;
+    const std::shared_ptr<Action> _chaseHumans;
 public:
 
     Vampire(Humanoid& owner);

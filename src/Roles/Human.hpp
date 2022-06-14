@@ -16,7 +16,7 @@ protected:
     /**
      * Action to flee and move randomly
      */
-    std::shared_ptr<Action> _flee;
+    const std::shared_ptr<Action> _flee;
 public:
     /**
      * Constructs a Human role for a given Humanoid.

@@ -28,7 +28,7 @@ public:
      * Constructs a position from another position.
      * @param other  The other position.
      */
-    Position(Position const &other);
+    Position(const Position &other);
 
     /**
     * Gets the x coordinate.
