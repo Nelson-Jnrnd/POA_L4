@@ -41,7 +41,7 @@ protected:
      * The action is to kill the humanoid.
      * @param target The humanoid that has been caught.
      */
-    virtual void catchTarget(Humanoid *target);
+    virtual void catchTarget(Humanoid *target) const;
 };
 
 #endif //POA_L4_CHASE_HPP

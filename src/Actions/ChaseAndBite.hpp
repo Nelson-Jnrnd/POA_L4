@@ -35,7 +35,7 @@ protected:
      * The action is to transform or kill the humanoid.
      * @param target The humanoid that has been caught.
      */
-    void catchTarget(Humanoid *target) override;
+    void catchTarget(Humanoid *target) const override;
 };
 
 

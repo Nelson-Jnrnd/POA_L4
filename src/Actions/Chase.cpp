@@ -37,7 +37,7 @@ void Chase::execute(Field &field) {
 
 Chase::Chase(Humanoid &subject, const std::type_info &targetType) : Action(subject), _targetType(targetType) {}
 
-void Chase::catchTarget(Humanoid *target) {
+void Chase::catchTarget(Humanoid *target) const{
     target->kill();
 }
 
