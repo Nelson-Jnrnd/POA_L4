@@ -22,6 +22,7 @@ public:
 
     static bool graphicSimulate(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
 
+    static bool stepByStepSimulation(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
 };
 
 

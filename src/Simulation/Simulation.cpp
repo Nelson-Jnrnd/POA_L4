@@ -59,3 +59,38 @@ bool Simulation::graphicSimulate(std::ostream& output, int width, int height, in
         field.print();
     }
 }
+
+bool Simulation::stepByStepSimulation(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy) {
+   StreamField field(output, width, height);
+   populate(field, nbHumans, nbVampires, nbBuffy);
+   field.print();
+
+   while(true) {
+      char input;
+
+      std::cin >> input;
+
+      switch (input) {
+         case 'q':
+            return EXIT_SUCCESS;
+
+         case 's':
+            simulate(width, height, nbHumans, nbVampires, nbBuffy, 10000);
+            break;
+
+         case 'n':
+            field.nextTurn();
+            field.print();
+            break;
+
+         default:
+            std::cout << "Error : Wrong command input!" << std::endl;
+            break;
+      }
+
+      if(field.getNumberOfHumanoid(typeid(Human)) == 0)
+         return false;
+      if(field.getNumberOfHumanoid(typeid(Vampire)) == 0)
+         return true;
+   }
+}
