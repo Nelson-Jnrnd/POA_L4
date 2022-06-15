@@ -25,7 +25,7 @@ class Vampire : public Role {
     const std::shared_ptr<Action> _chaseHumans;
 public:
 
-    Vampire(Humanoid& owner);
+    explicit Vampire(Humanoid& owner);
 
     void setAction(const Field &field) override;
 

@@ -81,13 +81,13 @@ public:
      * Execute the action of the humanoid.
      * @param field The field where the humanoid is.
      */
-    void executeAction(Field& field);
+    void executeAction(Field& field) const;
 
     /**
      * Set the action the humanoid will do next.
      * @param field The field where the humanoid is.
      */
-    void setAction(const Field& field);
+    void setAction(const Field& field) const;
 
     /**
      * Kill the humanoid.

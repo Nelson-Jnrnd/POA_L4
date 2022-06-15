@@ -30,7 +30,6 @@ public:
      */
     void execute(Field& field) override;
 
-    virtual ~Chase() = default;
 protected:
     /**
      * The type of humanoids that are chased.

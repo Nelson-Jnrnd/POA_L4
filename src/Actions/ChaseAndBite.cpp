@@ -12,5 +12,5 @@ void ChaseAndBite::catchTarget(Humanoid *target) const{
     if(Random::getInstance().getRandomDouble(0, 1) > _oddsToTransform)
         target->kill();
     else
-        target->setRole(std::make_unique<Vampire>(Vampire(*target)));
+        target->setRole(std::make_unique<Vampire>(*target));
 }

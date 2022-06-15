@@ -28,7 +28,12 @@ public:
      * Constructs a position from another position.
      * @param other  The other position.
      */
-    Position(const Position &other);
+    Position(const Position &other) = default;
+
+    /**
+     * Destructs the position.
+     */
+    ~Position() = default;
 
     /**
     * Gets the x coordinate.

@@ -25,7 +25,7 @@ protected:
      * Constructs an action for a given Humanoid.
      * @param subject The humanoid that is performing the action.
      */
-    Action(Humanoid& subject);
+    explicit Action(Humanoid& subject);
 public:
 
     /**

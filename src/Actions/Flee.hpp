@@ -18,7 +18,7 @@ public:
      * Constructs a Flee action for a given Humanoid.
      * @param subject  The humanoid that is performing the action.
      */
-    Flee(Humanoid& subject);
+    explicit Flee(Humanoid& subject);
     /**
      * Move the humanoid to a random adjacent position.
      * @param field  The field where the action will be performed.

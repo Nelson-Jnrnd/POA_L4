@@ -1,184 +1,46 @@
 <?xml version="1.0" encoding="iso-8859-15" standalone="no"?>
 <classDiagram>
   <diagramElements defaultViewEntities="ALL" defaultViewEnum="true" defaultViewMethods="TYPE_AND_NAME" defaultVisibleTypes="true" informations="" name="Buffy">
-    <association aggregation="NONE" direction="BIDIRECTIONAL" id="113106" name="is currently doing">
-      <role componentId="92465" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>1</min>
-          <max>1</max>
-        </multiplicity>
-      </role>
-      <role componentId="92463" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>1</min>
-          <max>1</max>
-        </multiplicity>
-      </role>
-    </association>
-    <entity entityType="CLASS" id="112455" isAbstract="true" name="Simulation" visibility="PUBLIC">
-      <method isAbstract="false" isStatic="true" name="populate" returnType="void" view="DEFAULT" visibility="PRIVATE">
-        <variable const="false" name="field" type="Field&amp;"/>
-        <variable const="false" name="nbHumans" type="int"/>
-        <variable const="false" name="nbVampires" type="int"/>
-        <variable const="false" name="nbBuffy" type="int"/>
-      </method>
-      <method isAbstract="false" isStatic="true" name="simulate" returnType="bool" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="width" type="int"/>
-        <variable const="false" name="height" type="int"/>
-        <variable const="false" name="nbHumans" type="int"/>
-        <variable const="false" name="nbVampires" type="int"/>
-        <variable const="false" name="nbBuffy" type="int"/>
-      </method>
-      <method isAbstract="false" isStatic="true" name="simulate" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="width" type="int"/>
-        <variable const="false" name="height" type="int"/>
-        <variable const="false" name="nbHumans" type="int"/>
-        <variable const="false" name="nbVampires" type="int"/>
-        <variable const="false" name="nbBuffy" type="int"/>
-        <variable const="false" name="nbSimulations" type="int"/>
-      </method>
-      <method isAbstract="false" isStatic="true" name="graphicSimulate" returnType="bool" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="output" type="ostream&amp;"/>
-        <variable const="false" name="width" type="int"/>
-        <variable const="false" name="height" type="int"/>
-        <variable const="false" name="nbHumans" type="int"/>
-        <variable const="false" name="nbVampires" type="int"/>
-        <variable const="false" name="nbBuffy" type="int"/>
-      </method>
-    </entity>
-    <entity entityType="CLASS" id="112263" isAbstract="false" name="Random" visibility="PUBLIC">
-      <attribute const="false" defaultValue="" isStatic="false" name="_rng" type="mt19937" visibility="PRIVATE"/>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="Random" returnType="" view="DEFAULT" visibility="PRIVATE"/>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="Random" returnType="" view="DEFAULT" visibility="PRIVATE">
-        <variable const="false" name="other" type="const_Random&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="operator=" returnType="void" view="DEFAULT" visibility="PRIVATE">
-        <variable const="false" name="other" type="const_Random&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="true" name="getInstance" returnType="Random&amp;" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="getRandomInt" returnType="int" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="min" type="int"/>
-        <variable const="false" name="max" type="int"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="getRandomDouble" returnType="double" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="min" type="double"/>
-        <variable const="false" name="max" type="double"/>
-      </method>
-    </entity>
-    <inheritance id="111569">
-      <child>111470</child>
-      <parent>98030</parent>
-    </inheritance>
-    <entity entityType="CLASS" id="111470" isAbstract="false" name="ChaseAndBIte" visibility="PUBLIC">
-      <attribute const="false" defaultValue="" isStatic="false" name="_oddsToTransform" type="double" visibility="PRIVATE"/>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="ChaseAndBIte" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="subject" type="Humanoid&amp;"/>
-        <variable const="false" name="targetType" type="const_type_info&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="catchTarget" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="target" type="Humanoid*"/>
-      </method>
-    </entity>
-    <inheritance id="95547">
-      <child>93003</child>
-      <parent>93005</parent>
-    </inheritance>
-    <inheritance id="95090">
-      <child>95089</child>
-      <parent>94858</parent>
-    </inheritance>
-    <inheritance id="94200">
-      <child>94199</child>
-      <parent>92464</parent>
-    </inheritance>
-    <inheritance id="93008">
-      <child>93004</child>
-      <parent>92465</parent>
-    </inheritance>
-    <inheritance id="93006">
-      <child>93005</child>
-      <parent>92465</parent>
-    </inheritance>
-    <inheritance id="92471">
-      <child>92468</child>
-      <parent>105854</parent>
-    </inheritance>
-    <inheritance id="92472">
-      <child>92469</child>
-      <parent>105854</parent>
+    <inheritance id="105805">
+      <child>92467</child>
+      <parent>92469</parent>
     </inheritance>
     <inheritance id="98071">
       <child>98030</child>
       <parent>92465</parent>
     </inheritance>
-    <inheritance id="105805">
-      <child>92467</child>
-      <parent>92469</parent>
+    <inheritance id="92472">
+      <child>92469</child>
+      <parent>105854</parent>
     </inheritance>
-    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="95372" name="uses">
-      <role componentId="94199" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>1</min>
-          <max>1</max>
-        </multiplicity>
-      </role>
-      <role componentId="95089" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>1</min>
-          <max>1</max>
-        </multiplicity>
-      </role>
-    </association>
-    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="93087" name="contains">
-      <role componentId="92464" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>1</min>
-          <max>1</max>
-        </multiplicity>
-      </role>
+    <inheritance id="92471">
+      <child>92468</child>
+      <parent>105854</parent>
+    </inheritance>
+    <inheritance id="93008">
+      <child>93004</child>
+      <parent>92465</parent>
+    </inheritance>
+    <inheritance id="94200">
+      <child>94199</child>
+      <parent>92464</parent>
+    </inheritance>
+    <inheritance id="95090">
+      <child>95089</child>
+      <parent>94858</parent>
+    </inheritance>
+    <inheritance id="111569">
+      <child>111470</child>
+      <parent>98030</parent>
+    </inheritance>
+    <association aggregation="NONE" direction="BIDIRECTIONAL" id="106044" name="is acting as">
       <role componentId="92463" name="" visibility="PRIVATE">
         <multiplicity>
-          <min>0</min>
-          <max>2147483647</max>
-        </multiplicity>
-      </role>
-    </association>
-    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="92819" name="is at">
-      <role componentId="92463" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>0</min>
-          <max>2147483647</max>
-        </multiplicity>
-      </role>
-      <role componentId="92483" name="" visibility="PRIVATE">
-        <multiplicity>
           <min>1</min>
           <max>1</max>
         </multiplicity>
       </role>
-    </association>
-    <association aggregation="NONE" direction="BIDIRECTIONAL" id="98124" name="can flee">
-      <role componentId="92469" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>1</min>
-          <max>1</max>
-        </multiplicity>
-      </role>
-      <role componentId="93004" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>1</min>
-          <max>1</max>
-        </multiplicity>
-      </role>
-    </association>
-    <association aggregation="NONE" direction="BIDIRECTIONAL" id="98137" name="can chase humans">
-      <role componentId="92468" name="" visibility="PRIVATE">
-        <multiplicity>
-          <min>1</min>
-          <max>1</max>
-        </multiplicity>
-      </role>
-      <role componentId="111470" name="" visibility="PRIVATE">
+      <role componentId="105854" name="" visibility="PRIVATE">
         <multiplicity>
           <min>1</min>
           <max>1</max>
@@ -199,100 +61,190 @@
         </multiplicity>
       </role>
     </association>
-    <association aggregation="NONE" direction="BIDIRECTIONAL" id="106044" name="is acting as">
-      <role componentId="92463" name="" visibility="PRIVATE">
+    <association aggregation="NONE" direction="BIDIRECTIONAL" id="98137" name="can chase humans">
+      <role componentId="92468" name="" visibility="PRIVATE">
         <multiplicity>
           <min>1</min>
           <max>1</max>
         </multiplicity>
       </role>
-      <role componentId="105854" name="" visibility="PRIVATE">
+      <role componentId="111470" name="" visibility="PRIVATE">
         <multiplicity>
           <min>1</min>
           <max>1</max>
         </multiplicity>
       </role>
     </association>
-    <entity entityType="CLASS" id="95089" isAbstract="false" name="HumanoidDisplayer" visibility="PUBLIC">
-      <attribute const="false" defaultValue="" isStatic="false" name="_outputChar" type="char" visibility="PRIVATE"/>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="HumanoidDisplayer" returnType="" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="const_getOutputChar" returnType="char" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="human" type="Human&amp;"/>
+    <association aggregation="NONE" direction="BIDIRECTIONAL" id="98124" name="can flee">
+      <role componentId="92469" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+      <role componentId="93004" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+    </association>
+    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="92819" name="is at">
+      <role componentId="92463" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>0</min>
+          <max>2147483647</max>
+        </multiplicity>
+      </role>
+      <role componentId="92483" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+    </association>
+    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="93087" name="contains">
+      <role componentId="92464" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+      <role componentId="92463" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>0</min>
+          <max>2147483647</max>
+        </multiplicity>
+      </role>
+    </association>
+    <association aggregation="NONE" direction="FIRST_TO_SECOND" id="95372" name="uses">
+      <role componentId="94199" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+      <role componentId="95089" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+    </association>
+    <association aggregation="NONE" direction="BIDIRECTIONAL" id="113106" name="is currently doing">
+      <role componentId="92465" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+      <role componentId="92463" name="" visibility="PRIVATE">
+        <multiplicity>
+          <min>1</min>
+          <max>1</max>
+        </multiplicity>
+      </role>
+    </association>
+    <entity entityType="CLASS" id="105854" isAbstract="true" name="Role" visibility="PUBLIC">
+      <method is-constructor="true" isAbstract="true" isStatic="false" name="Role" returnType="" view="DEFAULT" visibility="PROTECTED">
+        <variable const="false" name="owner" type="Humanoid&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="vampire" type="Vampire&amp;"/>
+      <method is-constructor="true" isAbstract="true" isStatic="false" name="~Role" returnType="" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="field" type="Field&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="buffy" type="Buffy&amp;"/>
+      <method isAbstract="false" isStatic="false" name="const_getOwner" returnType="Humanoid&amp;" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="true" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
       </method>
+      <method isAbstract="true" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="field" type="const_Field&amp;"/>
+      </method>
+      <method isAbstract="true" isStatic="false" name="const_getSpeed" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
     </entity>
-    <entity entityType="CLASS" id="94858" isAbstract="true" name="HumanoidVIsitor" visibility="PUBLIC">
-      <method is-constructor="true" isAbstract="true" isStatic="false" name="~HumanoidVIsitor" returnType="" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="true" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="human" type="Human&amp;"/>
+    <entity entityType="CLASS" id="98030" isAbstract="false" name="Chase" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="false" name="_targetType" type="const_type_info&amp;" visibility="PRIVATE"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Chase" returnType="" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="subject" type="Humanoid&amp;"/>
+        <variable const="false" name="targetType" type="const_type_info&amp;"/>
       </method>
-      <method isAbstract="true" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="vampire" type="Vampire&amp;"/>
-      </method>
-      <method isAbstract="true" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="buffy" type="Buffy&amp;"/>
-      </method>
-    </entity>
-    <entity entityType="CLASS" id="94199" isAbstract="false" name="StreamField" visibility="PUBLIC">
-      <attribute const="false" defaultValue="" isStatic="true" name="EMPTY_CELL" type="char" visibility="PRIVATE"/>
-      <attribute const="false" defaultValue="" isStatic="true" name="HORIZONTAL_BORDER" type="char" visibility="PRIVATE"/>
-      <attribute const="false" defaultValue="" isStatic="true" name="VERTICAL_BORDER" type="void" visibility="PRIVATE"/>
-      <attribute const="false" defaultValue="" isStatic="true" name="EDGE_BORDER" type="void" visibility="PRIVATE"/>
-      <attribute const="false" defaultValue="" isStatic="false" name="_field" type="vector&lt;vector&lt;char&gt;&gt;" visibility="PRIVATE"/>
-      <attribute const="false" defaultValue="" isStatic="false" name="_output" type="ostream&amp;" visibility="PRIVATE"/>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="StreamField" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="stream" type="ostream&amp;"/>
-        <variable const="false" name="width" type="size_t"/>
-        <variable const="false" name="height" type="size_t"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="const_print" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="update" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="const_printHorizontalBorder" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="nextTurn" returnType="unsigned" view="DEFAULT" visibility="PUBLIC"/>
-    </entity>
-    <entity entityType="CLASS" id="93005" isAbstract="false" name="Eliminate" visibility="PUBLIC">
       <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="f" type="Field&amp;"/>
       </method>
-    </entity>
-    <entity entityType="CLASS" id="93004" isAbstract="false" name="Flee" visibility="PUBLIC">
-      <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="f" type="Field&amp;"/>
+      <method isAbstract="false" isStatic="false" name="catchTarget" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="target" type="Humanoid*"/>
       </method>
     </entity>
-    <entity entityType="CLASS" id="93003" isAbstract="false" name="Transform" visibility="PUBLIC"/>
-    <entity entityType="CLASS" id="92463" isAbstract="false" name="Humanoid" visibility="PUBLIC">
-      <attribute const="false" defaultValue="" isStatic="false" name="_isAlive" type="bool" visibility="PRIVATE"/>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="Humanoid" returnType="" view="DEFAULT" visibility="PRIVATE">
+    <entity entityType="CLASS" id="92483" isAbstract="false" name="Position" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="false" name="_x" type="int" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="false" name="_y" type="int" visibility="PRIVATE"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Position" returnType="" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="other" type="const_Position&amp;"/>
+      </method>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Position" returnType="" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="x" type="int"/>
+        <variable const="false" name="y" type="int"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="const_getX" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="const_getY" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="setX" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="newX" type="int"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="setY" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="newY" type="int"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="getEuclideanDistance" returnType="double" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="position" type="const_Position&amp;"/>
       </method>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="~Humanoid" returnType="" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="const_getPosition" returnType="const_Position&amp;" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="const_isAlive" returnType="bool" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="const_getRole" returnType="const_unique_ptr&lt;Role&gt;&amp;" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="setPosition" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="newPosition" type="const_Position&amp;"/>
+      <method isAbstract="false" isStatic="false" name="const_operator==" returnType="bool" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="other" type="const_Position&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="setStrategy" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="newStrategy" type="const_shared_ptr&lt;Action&gt;&amp;"/>
+    </entity>
+    <entity entityType="CLASS" id="92469" isAbstract="false" name="Human" visibility="PUBLIC">
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Human" returnType="" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="owner" type="Humanoid&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="kill" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="setRole" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="role" type="unique_ptr&lt;Role&gt;"/>
+      <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="field" type="const_Field&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="field" type="Field&amp;"/>
+      <method isAbstract="false" isStatic="false" name="const_getSpeed" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
+    </entity>
+    <entity entityType="CLASS" id="92468" isAbstract="false" name="Vampire" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="true" name="ODDS_TO_TRANSFORM" type="double" visibility="PRIVATE"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Vampire" returnType="" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="owner" type="Humanoid&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="true" name="createHumanoid&lt;Role&gt;" returnType="Humanoid*" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="field" type="const_Field&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="const_getSpeed" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
+    </entity>
+    <entity entityType="CLASS" id="92467" isAbstract="false" name="Buffy" visibility="PUBLIC">
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Buffy" returnType="" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="owner" type="Humanoid&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="field" type="const_Field&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="const_getSpeed" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
+    </entity>
+    <entity entityType="CLASS" id="92465" isAbstract="true" name="Action" visibility="PUBLIC">
+      <method is-constructor="true" isAbstract="true" isStatic="false" name="Action" returnType="" view="DEFAULT" visibility="PROTECTED">
+        <variable const="false" name="subject" type="Humanoid&amp;"/>
+      </method>
+      <method is-constructor="true" isAbstract="true" isStatic="false" name="~Action" returnType="" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="true" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="f" type="Field&amp;"/>
+      </method>
     </entity>
     <entity entityType="CLASS" id="92464" isAbstract="false" name="Field" visibility="PUBLIC">
       <attribute const="false" defaultValue="" isStatic="false" name="_width" type="size_t" visibility="PRIVATE"/>
@@ -329,147 +281,411 @@
       </method>
       <method isAbstract="false" isStatic="false" name="nextTurn" returnType="unsigned" view="DEFAULT" visibility="PUBLIC"/>
     </entity>
-    <entity entityType="CLASS" id="92465" isAbstract="true" name="Action" visibility="PUBLIC">
-      <method is-constructor="true" isAbstract="true" isStatic="false" name="Action" returnType="" view="DEFAULT" visibility="PROTECTED">
-        <variable const="false" name="subject" type="Humanoid&amp;"/>
-      </method>
-      <method is-constructor="true" isAbstract="true" isStatic="false" name="~Action" returnType="" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="true" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="f" type="Field&amp;"/>
-      </method>
-    </entity>
-    <entity entityType="CLASS" id="92467" isAbstract="false" name="Buffy" visibility="PUBLIC">
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="Buffy" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="owner" type="Humanoid&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="field" type="const_Field&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="const_getSpeed" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
-    </entity>
-    <entity entityType="CLASS" id="92468" isAbstract="false" name="Vampire" visibility="PUBLIC">
-      <attribute const="false" defaultValue="" isStatic="true" name="ODDS_TO_TRANSFORM" type="double" visibility="PRIVATE"/>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="Vampire" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="owner" type="Humanoid&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="field" type="const_Field&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="const_getSpeed" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
-    </entity>
-    <entity entityType="CLASS" id="92469" isAbstract="false" name="Human" visibility="PUBLIC">
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="Human" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="owner" type="Humanoid&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="field" type="const_Field&amp;"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="const_getSpeed" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
-    </entity>
-    <entity entityType="CLASS" id="92483" isAbstract="false" name="Position" visibility="PUBLIC">
-      <attribute const="false" defaultValue="" isStatic="false" name="_x" type="int" visibility="PRIVATE"/>
-      <attribute const="false" defaultValue="" isStatic="false" name="_y" type="int" visibility="PRIVATE"/>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="Position" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="other" type="const_Position&amp;"/>
-      </method>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="Position" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="x" type="int"/>
-        <variable const="false" name="y" type="int"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="const_getX" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="const_getY" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="setX" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="newX" type="int"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="setY" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="newY" type="int"/>
-      </method>
-      <method isAbstract="false" isStatic="false" name="getEuclideanDistance" returnType="double" view="DEFAULT" visibility="PUBLIC">
+    <entity entityType="CLASS" id="92463" isAbstract="false" name="Humanoid" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="false" name="_isAlive" type="bool" visibility="PRIVATE"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Humanoid" returnType="" view="DEFAULT" visibility="PRIVATE">
         <variable const="false" name="position" type="const_Position&amp;"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="const_operator==" returnType="bool" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="other" type="const_Position&amp;"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="~Humanoid" returnType="" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="const_getPosition" returnType="const_Position&amp;" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="const_isAlive" returnType="bool" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="const_getRole" returnType="const_unique_ptr&lt;Role&gt;&amp;" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="setPosition" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="newPosition" type="const_Position&amp;"/>
       </method>
-    </entity>
-    <entity entityType="CLASS" id="98030" isAbstract="false" name="Chase" visibility="PUBLIC">
-      <attribute const="false" defaultValue="" isStatic="false" name="_targetType" type="const_type_info&amp;" visibility="PRIVATE"/>
-      <method is-constructor="true" isAbstract="false" isStatic="false" name="Chase" returnType="" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="subject" type="Humanoid&amp;"/>
-        <variable const="false" name="targetType" type="const_type_info&amp;"/>
+      <method isAbstract="false" isStatic="false" name="setStrategy" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="newStrategy" type="const_shared_ptr&lt;Action&gt;&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="kill" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="setRole" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="role" type="unique_ptr&lt;Role&gt;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="field" type="const_Field&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="field" type="Field&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="true" name="createHumanoid&lt;Role&gt;" returnType="Humanoid*" view="DEFAULT" visibility="PUBLIC"/>
+    </entity>
+    <entity entityType="CLASS" id="93004" isAbstract="false" name="Flee" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="f" type="Field&amp;"/>
+      </method>
+    </entity>
+    <entity entityType="CLASS" id="94199" isAbstract="false" name="StreamField" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="true" name="EMPTY_CELL" type="char" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="true" name="HORIZONTAL_BORDER" type="char" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="true" name="VERTICAL_BORDER" type="void" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="true" name="EDGE_BORDER" type="void" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="false" name="_field" type="vector&lt;vector&lt;char&gt;&gt;" visibility="PRIVATE"/>
+      <attribute const="false" defaultValue="" isStatic="false" name="_output" type="ostream&amp;" visibility="PRIVATE"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="StreamField" returnType="" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="stream" type="ostream&amp;"/>
+        <variable const="false" name="width" type="size_t"/>
+        <variable const="false" name="height" type="size_t"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="const_print" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="update" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="const_printHorizontalBorder" returnType="void" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="nextTurn" returnType="unsigned" view="DEFAULT" visibility="PUBLIC"/>
+    </entity>
+    <entity entityType="CLASS" id="94858" isAbstract="true" name="HumanoidVIsitor" visibility="PUBLIC">
+      <method is-constructor="true" isAbstract="true" isStatic="false" name="~HumanoidVIsitor" returnType="" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="true" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="human" type="Human&amp;"/>
+      </method>
+      <method isAbstract="true" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="vampire" type="Vampire&amp;"/>
+      </method>
+      <method isAbstract="true" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="buffy" type="Buffy&amp;"/>
+      </method>
+    </entity>
+    <entity entityType="CLASS" id="95089" isAbstract="false" name="HumanoidDisplayer" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="false" name="_outputChar" type="char" visibility="PRIVATE"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="HumanoidDisplayer" returnType="" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="const_getOutputChar" returnType="char" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="human" type="Human&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="vampire" type="Vampire&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="visit" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="buffy" type="Buffy&amp;"/>
+      </method>
+    </entity>
+    <entity entityType="CLASS" id="111470" isAbstract="false" name="ChaseAndBIte" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="false" name="_oddsToTransform" type="double" visibility="PRIVATE"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="ChaseAndBIte" returnType="" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="subject" type="Humanoid&amp;"/>
+        <variable const="false" name="targetType" type="const_type_info&amp;"/>
       </method>
       <method isAbstract="false" isStatic="false" name="catchTarget" returnType="void" view="DEFAULT" visibility="PUBLIC">
         <variable const="false" name="target" type="Humanoid*"/>
       </method>
     </entity>
-    <entity entityType="CLASS" id="105854" isAbstract="true" name="Role" visibility="PUBLIC">
-      <method is-constructor="true" isAbstract="true" isStatic="false" name="Role" returnType="" view="DEFAULT" visibility="PROTECTED">
-        <variable const="false" name="owner" type="Humanoid&amp;"/>
+    <entity entityType="CLASS" id="112263" isAbstract="false" name="Random" visibility="PUBLIC">
+      <attribute const="false" defaultValue="" isStatic="false" name="_rng" type="mt19937" visibility="PRIVATE"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Random" returnType="" view="DEFAULT" visibility="PRIVATE"/>
+      <method is-constructor="true" isAbstract="false" isStatic="false" name="Random" returnType="" view="DEFAULT" visibility="PRIVATE">
+        <variable const="false" name="other" type="const_Random&amp;"/>
       </method>
-      <method is-constructor="true" isAbstract="true" isStatic="false" name="~Role" returnType="" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="false" isStatic="false" name="executeAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="false" name="operator=" returnType="void" view="DEFAULT" visibility="PRIVATE">
+        <variable const="false" name="other" type="const_Random&amp;"/>
+      </method>
+      <method isAbstract="false" isStatic="true" name="getInstance" returnType="Random&amp;" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="false" name="getRandomInt" returnType="int" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="min" type="int"/>
+        <variable const="false" name="max" type="int"/>
+      </method>
+      <method isAbstract="false" isStatic="false" name="getRandomDouble" returnType="double" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="min" type="double"/>
+        <variable const="false" name="max" type="double"/>
+      </method>
+    </entity>
+    <entity entityType="CLASS" id="112455" isAbstract="true" name="Simulation" visibility="PUBLIC">
+      <method isAbstract="false" isStatic="true" name="populate" returnType="void" view="DEFAULT" visibility="PRIVATE">
         <variable const="false" name="field" type="Field&amp;"/>
+        <variable const="false" name="nbHumans" type="int"/>
+        <variable const="false" name="nbVampires" type="int"/>
+        <variable const="false" name="nbBuffy" type="int"/>
       </method>
-      <method isAbstract="false" isStatic="false" name="const_getOwner" returnType="Humanoid&amp;" view="DEFAULT" visibility="PUBLIC"/>
-      <method isAbstract="true" isStatic="false" name="accept" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="visitor" type="RoleVisitor&amp;"/>
+      <method isAbstract="false" isStatic="true" name="simulate" returnType="bool" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="width" type="int"/>
+        <variable const="false" name="height" type="int"/>
+        <variable const="false" name="nbHumans" type="int"/>
+        <variable const="false" name="nbVampires" type="int"/>
+        <variable const="false" name="nbBuffy" type="int"/>
       </method>
-      <method isAbstract="true" isStatic="false" name="setAction" returnType="void" view="DEFAULT" visibility="PUBLIC">
-        <variable const="false" name="field" type="const_Field&amp;"/>
+      <method isAbstract="false" isStatic="true" name="simulate" returnType="void" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="width" type="int"/>
+        <variable const="false" name="height" type="int"/>
+        <variable const="false" name="nbHumans" type="int"/>
+        <variable const="false" name="nbVampires" type="int"/>
+        <variable const="false" name="nbBuffy" type="int"/>
+        <variable const="false" name="nbSimulations" type="int"/>
       </method>
-      <method isAbstract="true" isStatic="false" name="const_getSpeed" returnType="int" view="DEFAULT" visibility="PUBLIC"/>
+      <method isAbstract="false" isStatic="true" name="graphicSimulate" returnType="bool" view="DEFAULT" visibility="PUBLIC">
+        <variable const="false" name="output" type="ostream&amp;"/>
+        <variable const="false" name="width" type="int"/>
+        <variable const="false" name="height" type="int"/>
+        <variable const="false" name="nbHumans" type="int"/>
+        <variable const="false" name="nbVampires" type="int"/>
+        <variable const="false" name="nbBuffy" type="int"/>
+      </method>
     </entity>
   </diagramElements>
   <umlView grid="10" name="Main view" open="true">
-    <relationView color="-12566464" relationId="106044">
+    <relationView color="-12566464" relationId="113106">
       <line>
         <point>
-          <x>941</x>
-          <y>591</y>
+          <x>2211</x>
+          <y>671</y>
         </point>
         <point>
-          <x>941</x>
-          <y>661</y>
+          <x>1361</x>
+          <y>671</y>
+        </point>
+        <point>
+          <x>1361</x>
+          <y>491</y>
+        </point>
+        <point>
+          <x>1141</x>
+          <y>491</y>
         </point>
       </line>
       <labelAssociation>
-        <x>948</x>
-        <y>613</y>
-        <w>69</w>
+        <x>1728</x>
+        <y>650</y>
+        <w>110</w>
         <h>17</h>
       </labelAssociation>
       <roleAssociation>
-        <x>945</x>
-        <y>595</y>
+        <x>2175</x>
+        <y>675</y>
         <w>0</w>
         <h>17</h>
       </roleAssociation>
       <roleAssociation>
-        <x>945</x>
-        <y>638</y>
+        <x>1145</x>
+        <y>495</y>
         <w>0</w>
         <h>17</h>
       </roleAssociation>
       <multipliciteAssociation>
-        <x>927</x>
-        <y>595</y>
+        <x>2197</x>
+        <y>648</y>
         <w>8</w>
         <h>17</h>
       </multipliciteAssociation>
       <multipliciteAssociation>
-        <x>927</x>
-        <y>638</y>
+        <x>1145</x>
+        <y>468</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+    </relationView>
+    <relationView color="-12566464" relationId="95372">
+      <line>
+        <point>
+          <x>1881</x>
+          <y>421</y>
+        </point>
+        <point>
+          <x>2121</x>
+          <y>421</y>
+        </point>
+      </line>
+      <labelAssociation>
+        <x>1993</x>
+        <y>430</y>
+        <w>28</w>
+        <h>17</h>
+      </labelAssociation>
+      <roleAssociation>
+        <x>1885</x>
+        <y>425</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <roleAssociation>
+        <x>2115</x>
+        <y>425</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <multipliciteAssociation>
+        <x>1885</x>
+        <y>398</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+      <multipliciteAssociation>
+        <x>2107</x>
+        <y>398</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+    </relationView>
+    <relationView color="-12566464" relationId="93087">
+      <line>
+        <point>
+          <x>1391</x>
+          <y>111</y>
+        </point>
+        <point>
+          <x>761</x>
+          <y>111</y>
+        </point>
+        <point>
+          <x>761</x>
+          <y>341</y>
+        </point>
+      </line>
+      <labelAssociation>
+        <x>765</x>
+        <y>230</y>
+        <w>54</w>
+        <h>17</h>
+      </labelAssociation>
+      <roleAssociation>
+        <x>1355</x>
+        <y>115</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <roleAssociation>
+        <x>765</x>
+        <y>318</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <multipliciteAssociation>
+        <x>1377</x>
+        <y>88</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+      <multipliciteAssociation>
+        <x>734</x>
+        <y>318</y>
+        <w>21</w>
+        <h>17</h>
+      </multipliciteAssociation>
+    </relationView>
+    <relationView color="-12566464" relationId="92819">
+      <line>
+        <point>
+          <x>711</x>
+          <y>371</y>
+        </point>
+        <point>
+          <x>641</x>
+          <y>371</y>
+        </point>
+      </line>
+      <labelAssociation>
+        <x>668</x>
+        <y>387</y>
+        <w>26</w>
+        <h>17</h>
+      </labelAssociation>
+      <roleAssociation>
+        <x>715</x>
+        <y>375</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <roleAssociation>
+        <x>605</x>
+        <y>375</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <multipliciteAssociation>
+        <x>684</x>
+        <y>346</y>
+        <w>21</w>
+        <h>17</h>
+      </multipliciteAssociation>
+      <multipliciteAssociation>
+        <x>647</x>
+        <y>345</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+    </relationView>
+    <relationView color="-12566464" relationId="98124">
+      <line>
+        <point>
+          <x>1241</x>
+          <y>1051</y>
+        </point>
+        <point>
+          <x>2131</x>
+          <y>1051</y>
+        </point>
+        <point>
+          <x>2131</x>
+          <y>921</y>
+        </point>
+      </line>
+      <labelAssociation>
+        <x>1690</x>
+        <y>1055</y>
+        <w>50</w>
+        <h>17</h>
+      </labelAssociation>
+      <roleAssociation>
+        <x>1245</x>
+        <y>1055</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <roleAssociation>
+        <x>2135</x>
+        <y>925</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <multipliciteAssociation>
+        <x>1245</x>
+        <y>1028</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+      <multipliciteAssociation>
+        <x>2117</x>
+        <y>925</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+    </relationView>
+    <relationView color="-12566464" relationId="98137">
+      <line>
+        <point>
+          <x>661</x>
+          <y>1141</y>
+        </point>
+        <point>
+          <x>661</x>
+          <y>1181</y>
+        </point>
+        <point>
+          <x>2501</x>
+          <y>1181</y>
+        </point>
+      </line>
+      <labelAssociation>
+        <x>669</x>
+        <y>1158</y>
+        <w>114</w>
+        <h>17</h>
+      </labelAssociation>
+      <roleAssociation>
+        <x>665</x>
+        <y>1145</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <roleAssociation>
+        <x>2465</x>
+        <y>1185</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <multipliciteAssociation>
+        <x>647</x>
+        <y>1145</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+      <multipliciteAssociation>
+        <x>2487</x>
+        <y>1158</y>
         <w>8</w>
         <h>17</h>
       </multipliciteAssociation>
@@ -528,297 +744,81 @@
         <h>17</h>
       </multipliciteAssociation>
     </relationView>
-    <relationView color="-12566464" relationId="98137">
+    <relationView color="-12566464" relationId="106044">
       <line>
         <point>
-          <x>661</x>
+          <x>941</x>
+          <y>591</y>
+        </point>
+        <point>
+          <x>941</x>
+          <y>661</y>
+        </point>
+      </line>
+      <labelAssociation>
+        <x>948</x>
+        <y>613</y>
+        <w>69</w>
+        <h>17</h>
+      </labelAssociation>
+      <roleAssociation>
+        <x>945</x>
+        <y>595</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <roleAssociation>
+        <x>945</x>
+        <y>638</y>
+        <w>0</w>
+        <h>17</h>
+      </roleAssociation>
+      <multipliciteAssociation>
+        <x>927</x>
+        <y>595</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+      <multipliciteAssociation>
+        <x>927</x>
+        <y>638</y>
+        <w>8</w>
+        <h>17</h>
+      </multipliciteAssociation>
+    </relationView>
+    <relationView color="-12566464" relationId="111569">
+      <line>
+        <point>
+          <x>2711</x>
           <y>1141</y>
         </point>
         <point>
-          <x>661</x>
-          <y>1181</y>
-        </point>
-        <point>
-          <x>2501</x>
-          <y>1181</y>
+          <x>2711</x>
+          <y>966</y>
         </point>
       </line>
-      <labelAssociation>
-        <x>669</x>
-        <y>1158</y>
-        <w>114</w>
-        <h>17</h>
-      </labelAssociation>
-      <roleAssociation>
-        <x>665</x>
-        <y>1145</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <roleAssociation>
-        <x>2465</x>
-        <y>1185</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <multipliciteAssociation>
-        <x>647</x>
-        <y>1145</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
-      <multipliciteAssociation>
-        <x>2487</x>
-        <y>1158</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
     </relationView>
-    <relationView color="-12566464" relationId="98124">
+    <relationView color="-12566464" relationId="95090">
       <line>
         <point>
-          <x>1241</x>
-          <y>1051</y>
-        </point>
-        <point>
-          <x>2131</x>
-          <y>1051</y>
-        </point>
-        <point>
-          <x>2131</x>
-          <y>921</y>
-        </point>
-      </line>
-      <labelAssociation>
-        <x>1690</x>
-        <y>1055</y>
-        <w>50</w>
-        <h>17</h>
-      </labelAssociation>
-      <roleAssociation>
-        <x>1245</x>
-        <y>1055</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <roleAssociation>
-        <x>2135</x>
-        <y>925</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <multipliciteAssociation>
-        <x>1245</x>
-        <y>1028</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
-      <multipliciteAssociation>
-        <x>2117</x>
-        <y>925</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
-    </relationView>
-    <relationView color="-12566464" relationId="92819">
-      <line>
-        <point>
-          <x>711</x>
-          <y>371</y>
-        </point>
-        <point>
-          <x>641</x>
-          <y>371</y>
-        </point>
-      </line>
-      <labelAssociation>
-        <x>668</x>
-        <y>387</y>
-        <w>26</w>
-        <h>17</h>
-      </labelAssociation>
-      <roleAssociation>
-        <x>715</x>
-        <y>375</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <roleAssociation>
-        <x>605</x>
-        <y>375</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <multipliciteAssociation>
-        <x>684</x>
-        <y>346</y>
-        <w>21</w>
-        <h>17</h>
-      </multipliciteAssociation>
-      <multipliciteAssociation>
-        <x>647</x>
-        <y>345</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
-    </relationView>
-    <relationView color="-12566464" relationId="93087">
-      <line>
-        <point>
-          <x>1391</x>
-          <y>111</y>
-        </point>
-        <point>
-          <x>761</x>
-          <y>111</y>
-        </point>
-        <point>
-          <x>761</x>
+          <x>2261</x>
           <y>341</y>
         </point>
-      </line>
-      <labelAssociation>
-        <x>765</x>
-        <y>230</y>
-        <w>54</w>
-        <h>17</h>
-      </labelAssociation>
-      <roleAssociation>
-        <x>1355</x>
-        <y>115</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <roleAssociation>
-        <x>765</x>
-        <y>318</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <multipliciteAssociation>
-        <x>1377</x>
-        <y>88</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
-      <multipliciteAssociation>
-        <x>734</x>
-        <y>318</y>
-        <w>21</w>
-        <h>17</h>
-      </multipliciteAssociation>
-    </relationView>
-    <relationView color="-12566464" relationId="95372">
-      <line>
         <point>
-          <x>1881</x>
-          <y>421</y>
-        </point>
-        <point>
-          <x>2121</x>
-          <y>421</y>
-        </point>
-      </line>
-      <labelAssociation>
-        <x>1993</x>
-        <y>430</y>
-        <w>28</w>
-        <h>17</h>
-      </labelAssociation>
-      <roleAssociation>
-        <x>1885</x>
-        <y>425</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <roleAssociation>
-        <x>2115</x>
-        <y>425</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <multipliciteAssociation>
-        <x>1885</x>
-        <y>398</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
-      <multipliciteAssociation>
-        <x>2107</x>
-        <y>398</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
-    </relationView>
-    <relationView color="-12566464" relationId="105805">
-      <line>
-        <point>
-          <x>1111</x>
-          <y>1211</y>
-        </point>
-        <point>
-          <x>1111</x>
-          <y>1126</y>
+          <x>2261</x>
+          <y>216</y>
         </point>
       </line>
     </relationView>
-    <relationView color="-12566464" relationId="98071">
+    <relationView color="-12566464" relationId="94200">
       <line>
         <point>
-          <x>2701</x>
-          <y>851</y>
+          <x>1601</x>
+          <y>381</y>
         </point>
         <point>
-          <x>2701</x>
-          <y>811</y>
-        </point>
-        <point>
-          <x>2331</x>
-          <y>811</y>
-        </point>
-        <point>
-          <x>2331</x>
-          <y>741</y>
-        </point>
-      </line>
-    </relationView>
-    <relationView color="-12566464" relationId="92472">
-      <line>
-        <point>
-          <x>1101</x>
-          <y>1011</y>
-        </point>
-        <point>
-          <x>1101</x>
-          <y>921</y>
-        </point>
-        <point>
-          <x>1011</x>
-          <y>921</y>
-        </point>
-        <point>
-          <x>1011</x>
-          <y>821</y>
-        </point>
-      </line>
-    </relationView>
-    <relationView color="-12566464" relationId="92471">
-      <line>
-        <point>
-          <x>731</x>
-          <y>1011</y>
-        </point>
-        <point>
-          <x>731</x>
-          <y>921</y>
-        </point>
-        <point>
-          <x>1011</x>
-          <y>921</y>
-        </point>
-        <point>
-          <x>1011</x>
-          <y>821</y>
+          <x>1601</x>
+          <y>286</y>
         </point>
       </line>
     </relationView>
@@ -842,121 +842,163 @@
         </point>
       </line>
     </relationView>
-    <relationView color="-12566464" relationId="94200">
+    <relationView color="-12566464" relationId="92471">
       <line>
         <point>
-          <x>1601</x>
-          <y>381</y>
+          <x>731</x>
+          <y>1011</y>
         </point>
         <point>
-          <x>1601</x>
-          <y>286</y>
+          <x>731</x>
+          <y>921</y>
+        </point>
+        <point>
+          <x>1011</x>
+          <y>921</y>
+        </point>
+        <point>
+          <x>1011</x>
+          <y>821</y>
         </point>
       </line>
     </relationView>
-    <relationView color="-12566464" relationId="95090">
+    <relationView color="-12566464" relationId="92472">
       <line>
         <point>
-          <x>2261</x>
-          <y>341</y>
+          <x>1101</x>
+          <y>1011</y>
         </point>
         <point>
-          <x>2261</x>
-          <y>216</y>
+          <x>1101</x>
+          <y>921</y>
+        </point>
+        <point>
+          <x>1011</x>
+          <y>921</y>
+        </point>
+        <point>
+          <x>1011</x>
+          <y>821</y>
         </point>
       </line>
     </relationView>
-    <relationView color="-12566464" relationId="111569">
+    <relationView color="-12566464" relationId="98071">
       <line>
         <point>
-          <x>2711</x>
-          <y>1141</y>
+          <x>2701</x>
+          <y>851</y>
         </point>
         <point>
-          <x>2711</x>
-          <y>966</y>
+          <x>2701</x>
+          <y>811</y>
+        </point>
+        <point>
+          <x>2331</x>
+          <y>811</y>
+        </point>
+        <point>
+          <x>2331</x>
+          <y>741</y>
         </point>
       </line>
     </relationView>
-    <relationView color="-12566464" relationId="113106">
+    <relationView color="-12566464" relationId="105805">
       <line>
         <point>
-          <x>2211</x>
-          <y>671</y>
+          <x>1111</x>
+          <y>1211</y>
         </point>
         <point>
-          <x>1361</x>
-          <y>671</y>
-        </point>
-        <point>
-          <x>1361</x>
-          <y>491</y>
-        </point>
-        <point>
-          <x>1141</x>
-          <y>491</y>
+          <x>1111</x>
+          <y>1126</y>
         </point>
       </line>
-      <labelAssociation>
-        <x>1728</x>
-        <y>650</y>
-        <w>110</w>
-        <h>17</h>
-      </labelAssociation>
-      <roleAssociation>
-        <x>2175</x>
-        <y>675</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <roleAssociation>
-        <x>1145</x>
-        <y>495</y>
-        <w>0</w>
-        <h>17</h>
-      </roleAssociation>
-      <multipliciteAssociation>
-        <x>2197</x>
-        <y>648</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
-      <multipliciteAssociation>
-        <x>1145</x>
-        <y>468</y>
-        <w>8</w>
-        <h>17</h>
-      </multipliciteAssociation>
     </relationView>
-    <componentView color="-2079" componentID="105854" displayAttributes="true" displayDefault="true" displayMethods="true">
+    <componentView color="-2079" componentID="112455" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
-        <x>790</x>
-        <y>660</y>
-        <w>440</w>
-        <h>160</h>
-      </geometry>
-    </componentView>
-    <componentView color="-2079" componentID="98030" displayAttributes="true" displayDefault="true" displayMethods="true">
-      <geometry>
-        <x>2500</x>
-        <y>850</y>
-        <w>400</w>
+        <x>2520</x>
+        <y>130</y>
+        <w>640</w>
         <h>115</h>
       </geometry>
     </componentView>
-    <componentView color="-2079" componentID="92483" displayAttributes="true" displayDefault="true" displayMethods="true">
+    <componentView color="-2079" componentID="112263" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
-        <x>290</x>
-        <y>340</y>
-        <w>350</w>
-        <h>205</h>
+        <x>2580</x>
+        <y>290</y>
+        <w>340</w>
+        <h>160</h>
       </geometry>
     </componentView>
-    <componentView color="-2079" componentID="92469" displayAttributes="true" displayDefault="true" displayMethods="true">
+    <componentView color="-2079" componentID="111470" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>2500</x>
+        <y>1140</y>
+        <w>430</w>
+        <h>100</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="95089" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>2120</x>
+        <y>340</y>
+        <w>390</w>
+        <h>145</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="94858" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>2130</x>
+        <y>100</y>
+        <w>270</w>
+        <h>115</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="94199" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>1480</x>
+        <y>380</y>
+        <w>400</w>
+        <h>220</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="93004" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>2050</x>
+        <y>850</y>
+        <w>230</w>
+        <h>70</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92463" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>710</x>
+        <y>340</y>
+        <w>430</w>
+        <h>250</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92464" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>1390</x>
+        <y>20</y>
+        <w>630</w>
+        <h>265</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92465" displayAttributes="true" displayDefault="true" displayMethods="true">
+      <geometry>
+        <x>2210</x>
+        <y>640</y>
+        <w>230</w>
+        <h>100</h>
+      </geometry>
+    </componentView>
+    <componentView color="-2079" componentID="92467" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
         <x>960</x>
-        <y>1010</y>
-        <w>280</w>
+        <y>1210</y>
+        <w>290</w>
         <h>115</h>
       </geometry>
     </componentView>
@@ -968,101 +1010,37 @@
         <h>130</h>
       </geometry>
     </componentView>
-    <componentView color="-2079" componentID="92467" displayAttributes="true" displayDefault="true" displayMethods="true">
+    <componentView color="-2079" componentID="92469" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
         <x>960</x>
-        <y>1210</y>
-        <w>290</w>
+        <y>1010</y>
+        <w>280</w>
         <h>115</h>
       </geometry>
     </componentView>
-    <componentView color="-2079" componentID="92465" displayAttributes="true" displayDefault="true" displayMethods="true">
+    <componentView color="-2079" componentID="92483" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
-        <x>2210</x>
-        <y>640</y>
-        <w>230</w>
-        <h>100</h>
-      </geometry>
-    </componentView>
-    <componentView color="-2079" componentID="92464" displayAttributes="true" displayDefault="true" displayMethods="true">
-      <geometry>
-        <x>1390</x>
-        <y>20</y>
-        <w>630</w>
-        <h>265</h>
-      </geometry>
-    </componentView>
-    <componentView color="-2079" componentID="92463" displayAttributes="true" displayDefault="true" displayMethods="true">
-      <geometry>
-        <x>710</x>
+        <x>290</x>
         <y>340</y>
-        <w>430</w>
-        <h>250</h>
+        <w>350</w>
+        <h>205</h>
       </geometry>
     </componentView>
-    <componentView color="-2079" componentID="93004" displayAttributes="true" displayDefault="true" displayMethods="true">
-      <geometry>
-        <x>2050</x>
-        <y>850</y>
-        <w>230</w>
-        <h>70</h>
-      </geometry>
-    </componentView>
-    <componentView color="-2079" componentID="94199" displayAttributes="true" displayDefault="true" displayMethods="true">
-      <geometry>
-        <x>1480</x>
-        <y>380</y>
-        <w>400</w>
-        <h>220</h>
-      </geometry>
-    </componentView>
-    <componentView color="-2079" componentID="94858" displayAttributes="true" displayDefault="true" displayMethods="true">
-      <geometry>
-        <x>2130</x>
-        <y>100</y>
-        <w>270</w>
-        <h>115</h>
-      </geometry>
-    </componentView>
-    <componentView color="-2079" componentID="95089" displayAttributes="true" displayDefault="true" displayMethods="true">
-      <geometry>
-        <x>2120</x>
-        <y>340</y>
-        <w>390</w>
-        <h>145</h>
-      </geometry>
-    </componentView>
-    <componentView color="-2079" componentID="111470" displayAttributes="true" displayDefault="true" displayMethods="true">
+    <componentView color="-2079" componentID="98030" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
         <x>2500</x>
-        <y>1140</y>
-        <w>430</w>
-        <h>100</h>
+        <y>850</y>
+        <w>400</w>
+        <h>115</h>
       </geometry>
     </componentView>
-    <componentView color="-2079" componentID="112263" displayAttributes="true" displayDefault="true" displayMethods="true">
+    <componentView color="-2079" componentID="105854" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
-        <x>2580</x>
-        <y>290</y>
-        <w>340</w>
+        <x>790</x>
+        <y>660</y>
+        <w>440</w>
         <h>160</h>
       </geometry>
     </componentView>
-    <componentView color="-2079" componentID="112455" displayAttributes="true" displayDefault="true" displayMethods="true">
-      <geometry>
-        <x>2520</x>
-        <y>130</y>
-        <w>640</w>
-        <h>115</h>
-      </geometry>
-    </componentView>
-    <note color="-2079" content="Action is done by the humanoid that owns the role doing the action...">
-      <noteGeometry>
-        <x>1640</x>
-        <y>760</y>
-        <w>200</w>
-        <h>60</h>
-      </noteGeometry>
-    </note>
   </umlView>
 </classDiagram>

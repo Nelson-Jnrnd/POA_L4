@@ -22,7 +22,7 @@ public:
      * Constructs a Human role for a given Humanoid.
      * @param owner The humanoid that is playing the role.
      */
-    Human(Humanoid& owner);
+    explicit Human(Humanoid& owner);
 
     void setAction(const Field &field) override;
 

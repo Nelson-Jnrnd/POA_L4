@@ -8,7 +8,7 @@
 #include "../Actions/Flee.hpp"
 
 
-Human::Human(Humanoid &owner) : _flee(std::make_shared<Flee>(owner)), Role(owner) {
+Human::Human(Humanoid &owner) : Role(owner), _flee(std::make_shared<Flee>(owner)) {
 }
 
 void Human::accept(RoleVisitor &visitor) {

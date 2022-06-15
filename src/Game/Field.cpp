@@ -10,7 +10,7 @@
 
 using std::list;
 
-Field::Field(std::size_t width, std::size_t height) : _width(width), _height(height), _turn(0), _humanoids(){}
+Field::Field(std::size_t width, std::size_t height) : _width(width), _height(height), _turn(0){}
 
 void Field::addHuman(int x, int y) {
     _humanoids.push_back(Humanoid::createHumanoid<Human>(Position(x, y)));
@@ -93,7 +93,7 @@ Humanoid* Field::getClosestHumanoid(const Humanoid &humanoid, const std::type_in
 
 std::size_t Field::getNumberOfHumanoid(const std::type_info &type) const {
     size_t numberOfHumanoid = 0;
-    for (Humanoid* humanoidOnBoard : _humanoids) {
+    for (const Humanoid* humanoidOnBoard : _humanoids) {
         // Check if the humanoid is of the type we are looking for.
         if (type == typeid(*humanoidOnBoard->getRole())) {
             numberOfHumanoid++;
