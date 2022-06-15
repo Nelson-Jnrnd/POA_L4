@@ -19,6 +19,22 @@ void HumanoidDisplayer::visit(Buffy &buffy) {
 }
 
 char HumanoidDisplayer::getOutputChar() const {
+   switch (_outputChar) {
+      case 'H':
+         SetConsoleTextAttribute(charColor, FOREGROUND_RED);
+         break;
+
+      case 'V':
+         SetConsoleTextAttribute(charColor, FOREGROUND_BLUE);
+         break;
+
+      case 'B':
+         SetConsoleTextAttribute(charColor, FOREGROUND_GREEN);
+         break;
+
+      default:
+         break;
+   }
     return _outputChar;
 }
 

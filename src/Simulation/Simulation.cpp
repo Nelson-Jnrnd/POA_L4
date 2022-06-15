@@ -80,7 +80,6 @@ bool Simulation::stepByStepSimulation(std::ostream& output, int width, int heigh
 
          case 'n':
             field.nextTurn();
-            field.print();
             break;
 
          default:
@@ -92,5 +91,7 @@ bool Simulation::stepByStepSimulation(std::ostream& output, int width, int heigh
          return false;
       if(field.getNumberOfHumanoid(typeid(Vampire)) == 0)
          return true;
+
+      field.print();
    }
 }
