@@ -63,6 +63,7 @@ bool Simulation::graphicSimulate(std::ostream& output, int width, int height, in
 bool Simulation::stepByStepSimulation(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy) {
    StreamField field(output, width, height);
    populate(field, nbHumans, nbVampires, nbBuffy);
+   field.nextTurn();
    field.print();
 
    while(true) {
@@ -87,10 +88,10 @@ bool Simulation::stepByStepSimulation(std::ostream& output, int width, int heigh
             break;
       }
 
-      if(field.getNumberOfHumanoid(typeid(Human)) == 0)
-         return false;
-      if(field.getNumberOfHumanoid(typeid(Vampire)) == 0)
-         return true;
+      if (field.getNumberOfHumanoid(typeid(Vampire)) == 0) {
+      std::cout << "Buffy killed all vampires" << std::endl;
+      return true;
+      }
 
       field.print();
    }

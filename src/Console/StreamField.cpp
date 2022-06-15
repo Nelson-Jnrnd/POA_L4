@@ -44,9 +44,9 @@ void StreamField::printHorizontalBorder() const{
 }
 
 unsigned int StreamField::nextTurn() {
-    turn = Field::nextTurn();
+    Field::nextTurn();
     update();
-    return turn;
+    return _turn;
 }
 
 void StreamField::printCommand() const {
@@ -54,7 +54,7 @@ void StreamField::printCommand() const {
 }
 
 unsigned StreamField::getTurn() const {
-   return turn;
+   return _turn;
 }
 
 

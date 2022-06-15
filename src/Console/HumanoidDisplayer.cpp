@@ -1,7 +1,3 @@
-//
-// Created by NelsonWork on 06.06.2022.
-//
-
 #include "HumanoidDisplayer.hpp"
 
 HumanoidDisplayer::HumanoidDisplayer() :  _outputChar(){}
@@ -19,7 +15,8 @@ void HumanoidDisplayer::visit(Buffy &buffy) {
 }
 
 char HumanoidDisplayer::getOutputChar() const {
-   switch (_outputChar) {
+   // implements of color to specific chars not completed
+   /*switch (_outputChar) {
       case 'H':
          SetConsoleTextAttribute(charColor, FOREGROUND_RED);
          break;
@@ -34,7 +31,7 @@ char HumanoidDisplayer::getOutputChar() const {
 
       default:
          break;
-   }
+   }*/
     return _outputChar;
 }
 

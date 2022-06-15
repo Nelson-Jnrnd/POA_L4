@@ -7,12 +7,25 @@
 
 int main() {
 
-    std::cout << "- Test Labo 4 - " << std::endl;
+   int width, height, nbHumans, nbVampires, nbBuffy;
+   std::cout << "- Test Labo 4 - " << std::endl;
 
+   std::cout << "Enter width of field : " << std::endl;
+   std::cin >> width;
 
-    Simulation::stepByStepSimulation(std::cout,50,50,10,10,1);
+   std::cout << "Enter height of field : " << std::endl;
+   std::cin >> height;
 
+   std::cout << "Enter number of humans in field : " << std::endl;
+   std::cin >> nbHumans;
 
+   std::cout << "Enter number of vampires in field : " << std::endl;
+   std::cin >> nbVampires;
 
-    return EXIT_SUCCESS;
+   std::cout << "Enter number of Buffy in field : " << std::endl;
+   std::cin >> nbBuffy;
+
+   Simulation::stepByStepSimulation(std::cout,width,height,nbHumans,nbVampires,nbBuffy);
+
+   return EXIT_SUCCESS;
 }

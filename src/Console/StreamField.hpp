@@ -1,7 +1,3 @@
-//
-// Created by NelsonWork on 06.06.2022.
-//
-
 #ifndef POA_L4_STREAMFIELD_HPP
 #define POA_L4_STREAMFIELD_HPP
 
@@ -23,7 +19,6 @@ class StreamField : public Field {
     static const char HORIZONTAL_BORDER;
     static const char VERTICAL_BORDER;
     static const char EDGE_BORDER;
-    unsigned turn = 0;
 
     /**
      * Displayer used to display Humanoids.

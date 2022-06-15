@@ -12,17 +12,56 @@
  * @author 
  */
 class Simulation {
-    static void populate(Field& field, int nbHumans, int nbVampires, int nbBuffy);
+   /**
+    * Method to add all humanoids to the field
+    * @param field of simulation
+    * @param nbHumans number of humans
+    * @param nbVampires number of vampires
+    * @param nbBuffy number of Buffy
+    */
+   static void populate(Field& field, int nbHumans, int nbVampires, int nbBuffy);
 public:
-    Simulation() = delete;
 
-    static bool simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+   /**
+    * Constructor
+    */
+   Simulation() = delete;
 
-    static void simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy, int nbSimulations);
+   /**
+    * Method to simulate a single party
+    * @param width of the field
+    * @param height of the field
+    * @param nbHumans number of humans
+    * @param nbVampires number of vampires
+    * @param nbBuffy number of Buffy
+    * @return if Buffy killed all vampires before all humans die
+    */
+   static bool simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy);
 
-    static bool graphicSimulate(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+   /**
+    * Method to simulate a given number of simualtions
+    * @param width of the field
+    * @param height of the field
+    * @param nbHumans number of humans
+    * @param nbVampires number of vampires
+    * @param nbBuffy number of Buffy
+    * @param nbSimulations number of simulations
+    */
+   static void simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy, int nbSimulations);
 
-    static bool stepByStepSimulation(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+   /**
+    * Method to show graphicaly a simulation
+    * @param output
+    * @param width
+    * @param height
+    * @param nbHumans
+    * @param nbVampires
+    * @param nbBuffy
+    * @return
+    */
+   static bool graphicSimulate(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+
+   static bool stepByStepSimulation(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
 };
 
 

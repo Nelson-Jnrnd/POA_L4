@@ -26,14 +26,15 @@ class Field {
     const std::size_t _height;
 
     /**
-     * Number of turns simulated by the field.
-     */
-    unsigned _turn;
-
-    /**
      * The list of humanoids in the game. Can contain dead humanoids.
      */
     std::list<Humanoid*> _humanoids;
+
+protected:
+   /**
+     * Number of turns simulated by the field.
+     */
+   unsigned _turn;
 
 public:
     /**
