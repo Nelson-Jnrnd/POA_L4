@@ -21,9 +21,10 @@ class Random {
     std::mt19937 _rng;
 
     Random();
-    Random(Random const&);
-    void operator=(Random const&);
+
 public:
+    Random(Random const&) = delete;
+    void operator=(Random const&) = delete;
     /**
      * Gets the singleton instance of the randomizer.
      * @return instance of the randomizer class.

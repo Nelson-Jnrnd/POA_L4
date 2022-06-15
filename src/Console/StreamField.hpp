@@ -76,6 +76,7 @@ public:
     void update();
 
     unsigned int nextTurn() override;
+
 };
 
 

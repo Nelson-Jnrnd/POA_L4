@@ -9,8 +9,8 @@
 #include <memory>
 
 
-Buffy::Buffy(Humanoid& owner) : _chaseVampires(std::make_shared<Chase>(owner, typeid(Vampire))),
-                                    Human(owner){
+Buffy::Buffy(Humanoid& owner) : Human(owner), _chaseVampires(std::make_shared<Chase>(owner, typeid(Vampire)))
+                                    {
 }
 
 

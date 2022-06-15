@@ -3,7 +3,6 @@
 
 Position::Position(int x, int y): _x(x), _y(y) {}
 
-Position::Position(Position const &other): Position(other.getX(), other.getY()) {}
 
 int Position::getX() const{
    return _x;

@@ -27,11 +27,11 @@ void Humanoid::setRole(std::unique_ptr<Role> role) {
 }
 
 
-void Humanoid::setAction(const Field &field) {
+void Humanoid::setAction(const Field &field) const{
     _role->setAction(field);
 }
 
-void Humanoid::executeAction(Field &field) {
+void Humanoid::executeAction(Field &field) const {
     if(_actionStrategy)
         _actionStrategy->execute(field);
 }

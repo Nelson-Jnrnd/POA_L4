@@ -26,10 +26,12 @@ void Chase::execute(Field &field) {
                         bestPosition = &adjacentPosition;
                     }
                 }
-                if (*bestPosition == target->getPosition() && (subjectSpeed > i + 1 || subjectSpeed == 1))
-                    catchTarget(target);
-                else
-                    _subject.setPosition(*bestPosition);
+                if(bestPosition != nullptr) {
+                    if (*bestPosition == target->getPosition() && (subjectSpeed > i + 1 || subjectSpeed == 1))
+                        catchTarget(target);
+                    else
+                        _subject.setPosition(*bestPosition);
+                }
             }
         }
     }
