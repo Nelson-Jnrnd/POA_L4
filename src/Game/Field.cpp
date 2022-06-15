@@ -106,3 +106,7 @@ Field::~Field() {
     for (auto & _humanoid : _humanoids)
         delete _humanoid;
 }
+
+unsigned Field::getTurn() const {
+    return _turn;
+}

@@ -63,6 +63,12 @@ public:
     std::size_t getHeight() const;
 
     /**
+     * Method to return the turn
+     * @return the actual turn
+     */
+    unsigned getTurn() const;
+
+    /**
      * Adds a human to the field.
      * @param x The x position of the human.
      * @param y The y position of the human.

@@ -40,17 +40,6 @@ class StreamField : public Field {
      */
     void printHorizontalBorder() const;
 
-    /**
-     * Prints the different command for the game
-     */
-    void printCommand() const;
-
-    /**
-     * Method to return the turn
-     * @return the actual turn
-     */
-    unsigned getTurn() const;
-
 public:
     /**
      * Constructs a StreamField with the given width and height.
@@ -71,7 +60,6 @@ public:
     void update();
 
     unsigned int nextTurn() override;
-
 };
 
 
