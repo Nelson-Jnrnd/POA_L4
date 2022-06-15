@@ -36,7 +36,7 @@ void StreamField::print() const{
         _output << VERTICAL_BORDER << std::endl;
     }
     printHorizontalBorder();
-    printCommand();
+
 }
 
 void StreamField::printHorizontalBorder() const{
@@ -44,17 +44,8 @@ void StreamField::printHorizontalBorder() const{
 }
 
 unsigned int StreamField::nextTurn() {
-    turn = Field::nextTurn();
+    unsigned turn = Field::nextTurn();
     update();
     return turn;
 }
-
-void StreamField::printCommand() const {
-   _output << "[" << getTurn() << "] / q->Quit / s->Statistic / n->Next Turn : " << std::endl;
-}
-
-unsigned StreamField::getTurn() const {
-   return turn;
-}
-
 

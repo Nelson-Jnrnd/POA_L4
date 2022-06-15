@@ -21,8 +21,7 @@ class StreamField : public Field {
     static const char EMPTY_CELL;
     static const char HORIZONTAL_BORDER;
     static const char VERTICAL_BORDER;
-    static const char EDGE_BORDER;
-    unsigned turn = 0;
+    static const char EDGE_BORDER;;
 
     /**
      * Displayer used to display Humanoids.
@@ -43,17 +42,6 @@ class StreamField : public Field {
      * Prints the horizontal border of the Field.
      */
     void printHorizontalBorder() const;
-
-    /**
-     * Prints the different command for the game
-     */
-    void printCommand() const;
-
-    /**
-     * Method to return the turn
-     * @return the actual turn
-     */
-    unsigned getTurn() const;
 
 public:
     /**

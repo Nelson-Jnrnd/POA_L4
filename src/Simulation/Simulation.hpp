@@ -13,14 +13,17 @@
  */
 class Simulation {
     static void populate(Field& field, int nbHumans, int nbVampires, int nbBuffy);
+    /**
+     * Prints the different command for the game
+     */
+    static void printCommand(std::ostream& output, const Field& field);
+
 public:
     Simulation() = delete;
 
     static bool simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy);
 
-    static void simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy, int nbSimulations);
-
-    static bool graphicSimulate(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+    static void simulate(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy, int nbSimulations);
 
     static bool stepByStepSimulation(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
 };
