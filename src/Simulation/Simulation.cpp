@@ -66,23 +66,22 @@ bool Simulation::stepByStepSimulation(std::ostream &output, int width, int heigh
             case 's':
                 simulate(output, width, height, nbHumans, nbVampires, nbBuffy, 10000);
                 break;
-
             case 'n':
                 field.nextTurn();
-                field.print();
                 break;
 
             default:
-                output << "Error : Wrong command input!" << std::endl;
+                std::cout << "Error : Wrong command input!" << std::endl;
                 break;
         }
 
-        if (field.getNumberOfHumanoid(typeid(Human)) == 0)
-            return false;
-        if (field.getNumberOfHumanoid(typeid(Vampire)) == 0)
-            return true;
+      if(field.getNumberOfHumanoid(typeid(Human)) == 0)
+         return false;
+      if(field.getNumberOfHumanoid(typeid(Vampire)) == 0)
+         return true;
 
-    }
+      field.print();
+   }
 }
 
 void Simulation::printCommand(std::ostream &output, const Field &field) {

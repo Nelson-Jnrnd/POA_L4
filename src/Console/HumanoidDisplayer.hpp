@@ -10,6 +10,7 @@
 #include "../Game/Humanoid.hpp"
 #include <cstdio>
 #include <iostream>
+#include <windows.h>
 
 /**
  * Represent a HumanoidDisplayer that can display a Humanoid depending on its type.
@@ -24,6 +25,8 @@ class HumanoidDisplayer : public RoleVisitor {
      * The output char of the last Humanoid visited.
      */
     char _outputChar;
+
+    HANDLE charColor = GetStdHandle(STD_OUTPUT_HANDLE);
 public:
     /**
      * Constructs a HumanoidDisplayer.

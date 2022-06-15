@@ -10,6 +10,7 @@
 #include "../Game/Field.hpp"
 #include "HumanoidDisplayer.hpp"
 
+
 /**
  * Represent a Field that can be displayed in a output stream.
  * @version 1.0
