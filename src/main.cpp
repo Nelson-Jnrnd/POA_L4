@@ -5,25 +5,19 @@
 #include "Console/StreamField.hpp"
 #include "Simulation/Simulation.hpp"
 
-int main() {
+int main(int argc, char** argv) {
 
    int width, height, nbHumans, nbVampires, nbBuffy;
-   std::cout << "- Test Labo 4 - " << std::endl;
+    if(argc != 5) {
+        std::cout << "ERROR : Program parameters are width, height, nbHumans, nbVampires" << std::endl;
+        return EXIT_FAILURE;
+    }
 
-   std::cout << "Enter width of field : " << std::endl;
-   std::cin >> width;
-
-   std::cout << "Enter height of field : " << std::endl;
-   std::cin >> height;
-
-   std::cout << "Enter number of humans in field : " << std::endl;
-   std::cin >> nbHumans;
-
-   std::cout << "Enter number of vampires in field : " << std::endl;
-   std::cin >> nbVampires;
-
-   std::cout << "Enter number of Buffy in field : " << std::endl;
-   std::cin >> nbBuffy;
+    width = atoi(argv[1]);
+    height = atoi(argv[2]);
+    nbHumans = atoi(argv[3]);
+    nbVampires = atoi(argv[4]);
+    nbBuffy = 1;
 
    Simulation::stepByStepSimulation(std::cout,width,height,nbHumans,nbVampires,nbBuffy);
 
