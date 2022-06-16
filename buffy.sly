@@ -629,12 +629,12 @@
           <y>381</y>
         </point>
         <point>
-          <x>721</x>
+          <x>781</x>
           <y>381</y>
         </point>
       </line>
       <labelAssociation>
-        <x>795</x>
+        <x>825</x>
         <y>385</y>
         <w>26</w>
         <h>17</h>
@@ -646,7 +646,7 @@
         <h>17</h>
       </roleAssociation>
       <roleAssociation>
-        <x>725</x>
+        <x>785</x>
         <y>385</y>
         <w>0</w>
         <h>17</h>
@@ -658,7 +658,7 @@
         <h>17</h>
       </multipliciteAssociation>
       <multipliciteAssociation>
-        <x>725</x>
+        <x>785</x>
         <y>359</y>
         <w>8</w>
         <h>17</h>
@@ -948,7 +948,7 @@
     </componentView>
     <componentView color="-2079" componentID="92483" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
-        <x>410</x>
+        <x>470</x>
         <y>350</y>
         <w>310</w>
         <h>220</h>
@@ -1052,7 +1052,7 @@
     </componentView>
     <componentView color="-2079" componentID="112455" displayAttributes="true" displayDefault="true" displayMethods="true">
       <geometry>
-        <x>2040</x>
+        <x>1920</x>
         <y>560</y>
         <w>780</w>
         <h>160</h>
