@@ -20,7 +20,7 @@ class Simulation {
     * @param nbVampires number of vampires
     * @param nbBuffy number of Buffy
     */
-   static void populate(Field& field, int nbHumans, int nbVampires, int nbBuffy);
+   static void populate(Field& field, std::size_t nbHumans, std::size_t nbVampires, std::size_t nbBuffy);
 
     /**
      * Prints the different command for the game
@@ -42,7 +42,7 @@ public:
     * @param nbBuffy number of Buffy
     * @return if Buffy killed all vampires before all humans die
     */
-   static bool simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+   static bool simulate(std::size_t width, std::size_t height, std::size_t nbHumans, std::size_t nbVampires, std::size_t nbBuffy);
 
    /**
     * Method to simulate a given number of simualtions
@@ -54,7 +54,7 @@ public:
     * @param nbBuffy number of Buffy
     * @param nbSimulations number of simulations
     */
-    static void simulate(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy, int nbSimulations);
+    static void simulate(std::ostream& output, std::size_t width, std::size_t height, std::size_t nbHumans, std::size_t nbVampires, std::size_t nbBuffy, std::size_t nbSimulations);
 
    /**
     * Method to show graphicaly a simulation
@@ -66,7 +66,7 @@ public:
     * @param nbBuffy number of Buffy
     * @return
     */
-   static bool graphicSimulate(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+   static bool graphicSimulate(std::ostream& output, std::size_t width, std::size_t height, std::size_t nbHumans, std::size_t nbVampires, std::size_t nbBuffy);
 
    /**
     * Method to display field and where the user can see each turn of a simulation
@@ -79,7 +79,7 @@ public:
     * @param nbBuffy number of Buffy
     * @return
     */
-   static bool stepByStepSimulation(std::ostream& output, int width, int height, int nbHumans, int nbVampires, int nbBuffy);
+   static bool stepByStepSimulation(std::ostream& output, std::size_t width, std::size_t height, std::size_t nbHumans, std::size_t nbVampires, std::size_t nbBuffy);
 };
 
 

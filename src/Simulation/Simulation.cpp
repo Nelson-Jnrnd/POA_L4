@@ -5,7 +5,7 @@
 #include "../Roles/Human.hpp"
 #include "../Console/StreamField.hpp"
 
-bool Simulation::simulate(int width, int height, int nbHumans, int nbVampires, int nbBuffy) {
+bool Simulation::simulate(std::size_t width, std::size_t height, std::size_t nbHumans, std::size_t nbVampires, std::size_t nbBuffy) {
     Field field(width, height);
 
     populate(field, nbHumans, nbVampires, nbBuffy);
@@ -18,8 +18,8 @@ bool Simulation::simulate(int width, int height, int nbHumans, int nbVampires, i
     }
 }
 
-void Simulation::simulate(std::ostream &output, int width, int height, int nbHumans, int nbVampires, int nbBuffy,
-                          int nbSimulations) {
+void Simulation::simulate(std::ostream &output, std::size_t width, std::size_t height, std::size_t nbHumans, std::size_t nbVampires, std::size_t nbBuffy,
+                          std::size_t nbSimulations) {
     int nbTimesHumanWon = 0;
     for (int i = 1; i <= nbSimulations; i++) {
         output << "Simulation " << i << std::endl;
@@ -30,7 +30,7 @@ void Simulation::simulate(std::ostream &output, int width, int height, int nbHum
     output << "Human won " << (double) nbTimesHumanWon / nbSimulations * 100 << "% of the time" << std::endl;
 }
 
-void Simulation::populate(Field &field, int nbHumans, int nbVampires, int nbBuffy) {
+void Simulation::populate(Field &field, std::size_t nbHumans, std::size_t nbVampires, std::size_t nbBuffy) {
     Random &random = Random::getInstance();
 
     for (int i = 0; i < nbHumans; i++) {
@@ -44,8 +44,8 @@ void Simulation::populate(Field &field, int nbHumans, int nbVampires, int nbBuff
     }
 }
 
-bool Simulation::stepByStepSimulation(std::ostream &output, int width, int height, int nbHumans, int nbVampires,
-                                      int nbBuffy) {
+bool Simulation::stepByStepSimulation(std::ostream &output, std::size_t width, std::size_t height, std::size_t nbHumans, std::size_t nbVampires,
+                                      std::size_t nbBuffy) {
     StreamField field(output, width, height);
     populate(field, nbHumans, nbVampires, nbBuffy);
 
